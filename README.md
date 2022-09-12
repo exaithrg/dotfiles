@@ -152,7 +152,6 @@ F1 "start help"
 :help c_CTRL-D "getting help"
 :help insert-index "getting help"
 :help user-manual "getting help"
-:g/V/t.|-d<CR>ZZ "hello vimgolf"
 ```
 
 ### LongerCommands
