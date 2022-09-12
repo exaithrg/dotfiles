@@ -155,6 +155,21 @@ F1 "start help"
 :g/V/t.|-d<CR>ZZ "hello vimgolf"
 ```
 
+### LongerCommands
+
+```css
+%s/\[.*\](\(.*\))/\1/g "replace named Markdown links with plain URLs"
+i1<ESC>q1yyp<C-a>q98@1 "generate 1 to 100"
+<C-v>24l4jd$p "block select and repaste"
+qa3jYjVpq2@aZZ "use marco to copy and paste"
+:g/V/t.|+d<CR>ZZ "replace specific lines"
+:g/V/t+|-d<CR>ZZ "replace specific lines"
+:%s/aaa/x&x<CR>ZZ "replace aaa with xaaax"
+qa5wlguwwl.wl.0jq7@a5Gfl~ZZ "HONG KONG to Hong Kong"
+oCOLORS = {<Esc>qq<CR>i  '<Esc>ElcW': '<Esc>A',<Esc>@qq@qo<BS><BS>}<Esc>ZZ "format css"
+ww8sNEW<Esc><C-A>ZZ "A HAPPY NEW YEAR 2014 !"
+```
+
 ### MyKeyMap
 
 ```css
@@ -171,6 +186,56 @@ nnoremap QQ :q!<CR>	"QQ not ZQ"
 :PlugStatus
 :PlugClean
 :PlugUpdate
+```
+
+### Vimium
+
+#### Shortcuts
+
+```css
+f "open a link in current tab"
+F "open a linke in a new tab"
+hjkl "scroll line"
+gg "go to top"
+G "go to bottom"
+du "scroll half page"
+yy "copy url"
+p "open url in current tab"
+P "open url in new tab"
+o "open url/history/bookmark"
+b "open a bookmark"
+B "open a bookmark in newtab"
+/ "search"
+n "cycle forward to the next match"
+N "cycle backward to the previous match"
+t "create new tab"
+T "search in all opened tabs"
+J "go to tab left"
+K "go to tab right"
+^ "go to previouse tab"
+g0 "goto first tab"
+g$ "goto last tab"
+yt "duplicate tab"
+<a-m> "mute tab"
+x "close tab"
+X "restore tab"
+<a-q> "closeTabsOnLeft"
+<a-w> "closeTabsOnRight"
+```
+
+#### MyKeyMap
+
+```css
+# Insert your preferred key mappings here.
+map <a-q> closeTabsOnLeft
+map <a-w> closeTabsOnRight
+map u restoreTab
+# map Xz closeTabsOnLeft
+# map Xc closeTabsOnRight
+map H previousTab
+map L nextTab
+map u scrollPageUp
+map d scrollPageDown
 ```
 
 ## RandomQuotes
