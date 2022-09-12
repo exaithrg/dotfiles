@@ -29,7 +29,7 @@ set editing-mode vi
 hjkl "move the cursor"
 ZQ=:q!<CR> "force quit"
 ZZ=:wq<CR> "write and quit"
-<ESC> " back to normal mode"
+<ESC> "back to normal mode"
 u "undo"
 U "undo, whole line"
 ^R "redo"
