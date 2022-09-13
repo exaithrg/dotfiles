@@ -7,11 +7,36 @@
 
 **PS**: If you want to do the same thing in windows, use [PowerToys](https://github.com/microsoft/PowerToys)
 
+```css
+clear Lock
+keycode 9 = Caps_Lock NoSymbol Caps_Lock
+keycode 66 = Escape NoSymbol Escape
+add Lock = Caps_Lock
+```
+
 ## Bashrc
 
 **Enable Vim-mode**
 
 > If you’re a Bash user, use `set -o vi`. If you use Zsh, `bindkey -v`. For Fish, `fish_vi_key_bindings`. Additionally, no matter what shell you use, you can `export EDITOR=vim`. This is the environment variable used to decide which editor is launched when a program wants to start an editor. For example, `git` will use this editor for commit messages.
+
+```bash
+# some more ls aliases
+alias ll='ls -ahlF'
+alias la='ls -A'
+alias l='ls -CF'
+alias sl='sl -e'
+alias ty='typora'
+alias tmuxs='tmux new -s'
+alias tmuxa='tmux attach -t'
+alias gadd='git add .'
+alias gcmt='git commit -m'
+# alias scs='gnome-screenshot -a'
+# alias matr='cmatrix -r'
+# alias matg='cmatrix'
+set -o vi
+export EDITOR=vim
+```
 
 ## Inputrc
 
@@ -239,6 +264,55 @@ map u scrollPageUp
 map d scrollPageDown
 ```
 
+## Tmux
+
+**shortcuts**
+
+```css
+tmuxs 'tmux new -s'
+tmuxa 'tmux attach -t'
+^b % "new split horizionally"
+^b " "new split vertically"
+^b ! "use current pane as new window"
+^b ? "open help"
+^b s "list all session"
+^b <arrow> "change pane"
+^b ^<arrow> "resize pane"
+^b x "close current pane"
+^d "close current pane"
+^b ; "to previous pane"
+^b o "to next pane"
+tmux new -s <session-name> "new session"
+^b d "detach a session"
+tmux ls "list all session"
+tmux attach -t 0 "reenter a exist session"
+^b c "new window"
+^b p "previous window"
+^b n "next window"
+^b l "switch window"
+^b & "close current window"
+^b , "rename window"
+^b w "select window"
+^b s "select session"
+^b : "enter cmd mode"
+```
+
+**myown**
+
+```css
+^x "replace ^b"
+- "split vertically"
+| "split horizontally"
+<hjkl> "select pane"
+^<hjkl> "resize pane"
+^u "swap pane"
+^d "swap pane"
+e "last pane"
+^e "last window"
+q "kill pane"
+^q "kill window"
+```
+
 ## RandomQuotes
 
 `cp ./randomquotes.sh ~/.randomquotes`
@@ -254,6 +328,8 @@ A tool bootstraps your dotfiles: **[dotbot](https://github.com/anishathalye/dotb
 **[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)** [ Highly recommended! ] 
 
 MIT instructors’ dotfiles ([Anish](https://github.com/anishathalye/dotfiles), [Jon](https://github.com/jonhoo/configs), [Jose](https://github.com/JJGO/dotfiles)) 
+
+[XuXiaoDong's tmux configuration](https://github.com/xuxiaodong/tmuxen)
 
 [130 Short Quotes That Will Inspire You (Fast)](https://wisdomquotes.com/short-quotes/)
 
