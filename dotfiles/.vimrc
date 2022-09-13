@@ -109,6 +109,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'ferrine/md-img-paste.vim'
 "Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
