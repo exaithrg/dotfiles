@@ -1,7 +1,7 @@
 # My Dotfiles
 **For linux configuration**
 
-## UpdateAuto
+## AutoUpdate
 
 Automatically update my dotfiles in this repository
 
@@ -332,6 +332,8 @@ Add `source ~/.randomquotes` to the end of `~/.bashrc `
 ## Tools
 
 A tool bootstraps your dotfiles: **[dotbot](https://github.com/anishathalye/dotbot)**
+
+Switch between vim and tmux panes: **[vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)**
 
 ## Thanks
 
