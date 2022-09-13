@@ -5,6 +5,8 @@
 
 `.Xmodmap` is used to remap `<ESC>` with `<CapsLock>`
 
+**PS**: If you want to do the same thing in windows, use [PowerToys](https://github.com/microsoft/PowerToys)
+
 ## Bashrc
 
 **Enable Vim-mode**
