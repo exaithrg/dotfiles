@@ -11,10 +11,6 @@ Automatically create backups of my dotfiles
 
 Automatically update my dotfiles in this repository and push them to github
 
-### pull_auto
-
-Automatically update local repository and copy dotfiles to home directory
-
 ## XmodMap
 
 `.Xmodmap` is used to remap `<ESC>` with `<CapsLock>`
