@@ -10,3 +10,4 @@ cp ~/.Xmodmap dotfiles/.Xmodmap
 git add .
 git commit -m "auto update"
 echo "AUTO UPDATE FINISH"
+echo "Please use git push if anything changed."
