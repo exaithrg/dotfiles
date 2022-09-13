@@ -88,9 +88,11 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
+# Enable ghrtools, like autopush and autocmt
 PATH=$PATH:/home/geng/work/ghrtools
 export PATH
+
+# some more ls aliases
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'
