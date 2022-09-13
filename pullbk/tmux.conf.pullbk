@@ -1,0 +1,83 @@
+### terminal color setting
+# you need use "echo $TERM" first to decide which color you need to use
+# set -g default-terminal "screen-256color"
+set -g default-terminal "xterm-256color"
+# set tmux to truecolor
+set-option -ga terminal-overrides ",*256col*:Tc" 
+
+### time(ms) to show the message bar
+set -g display-time 3000
+set -g escape-time 200
+### disable window title auto-rename
+setw -g automatic-rename off
+### monitor window message
+setw -g monitor-activity on
+### tmux set
+setw -g mode-keys vi    
+set -g visual-activity on
+### disable mouse
+set -g mouse off
+### set history limit
+set-option -g history-limit 5000
+set-option -g status-keys vi                         
+
+# bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+#-- bindkeys --#
+# prefix key (Ctrl+a)
+set -g prefix ^x
+unbind ^b
+bind ^x send-prefix
+
+# split window
+# vertical split (prefix -)
+unbind '"'
+bind - splitw -v
+# horizontal split (prefix |)
+unbind %
+bind | splitw -h 
+
+# select pane
+bind k selectp -U # above (prefix k)
+bind j selectp -D # below (prefix j)
+bind h selectp -L # left (prefix h)
+bind l selectp -R # right (prefix l)
+
+bind L select-window -l # switch window
+bind W new-window
+bind q select-window -p
+bind e select-window -n
+
+
+# resize pane
+bind -r ^k resizep -U 5 # upward (prefix Ctrl+k)
+bind -r ^j resizep -D 5 # downward (prefix Ctrl+j)
+bind -r ^h resizep -L 5 # to the left (prefix Ctrl+h)
+bind -r ^l resizep -R 5 # to the right (prefix Ctrl+l)
+
+# swap pane
+# swap with the previous pane (prefix Ctrl+u)
+# bind ^u swapp -U
+# swap with the next pane (prefix Ctrl+d)
+# bind ^d swapp -D
+
+# misc
+# select the last pane (prefix e)
+# bind e lastp
+# select the last window (prefix Ctrl+e)
+# bind ^e last
+# kill pane (prefix q)
+# bind q killp
+# kill window (prefix Ctrl+q)
+# bind ^q killw
+
+# ERROR config, it will totally control w
+# bind -n w new-window
+
+# bind-key c new-window -c "#{pane_current_path}"
+# bind-key % split-window -h -c "#{pane_current_path}"
+# bind-key '"' split-window -c "#{pane_current_path}"
+
+# bind ^z run "tmux-zoom"
+
+
