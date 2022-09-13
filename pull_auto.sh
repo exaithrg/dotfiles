@@ -1,9 +1,9 @@
 git pull
-cp -i .bashrc ~/.bashrc
-cp -i .condarc ~/.condarc
-cp -i .gitconfig ~/.gitconfig
-cp -i .inputrc ~/.inputrc
-cp -i .randomquotes ~/.randomquotes
-cp -i .tmux.conf ~/.tmux.conf
-cp -i .vimrc ~/.vimrc
-cp -i .Xmodmap ~/.Xmodmap
+cp -i dotfiles/.bashrc ~/.bashrc
+cp -i dotfiles/.condarc ~/.condarc
+cp -i dotfiles/.gitconfig ~/.gitconfig
+cp -i dotfiles/.inputrc ~/.inputrc
+cp -i dotfiles/.randomquotes ~/.randomquotes
+cp -i dotfiles/.tmux.conf ~/.tmux.conf
+cp -i dotfiles/.vimrc ~/.vimrc
+cp -i dotfiles/.Xmodmap ~/.Xmodmap

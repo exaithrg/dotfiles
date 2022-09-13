@@ -1,11 +1,11 @@
-cp ~/.bashrc .bashrc
-cp ~/.condarc .condarc
-cp ~/.gitconfig .gitconfig
-cp ~/.inputrc .inputrc
-cp ~/.randomquotes .randomquotes
-cp ~/.tmux.conf .tmux.conf
-cp ~/.vimrc .vimrc
-cp ~/.Xmodmap .Xmodmap
+cp ~/.bashrc dotfiles/.bashrc
+cp ~/.condarc dotfiles/.condarc
+cp ~/.gitconfig dotfiles/.gitconfig
+cp ~/.inputrc dotfiles/.inputrc
+cp ~/.randomquotes dotfiles/.randomquotes
+cp ~/.tmux.conf dotfiles/.tmux.conf
+cp ~/.vimrc dotfiles/.vimrc
+cp ~/.Xmodmap dotfiles/.Xmodmap
 git add .
 git commit -m "auto update"
 git push
