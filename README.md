@@ -1,6 +1,20 @@
 # My Dotfiles
 **For linux configuration**
 
+## AutoUpdateTools
+
+### bkup_auto
+
+Automatically create backups of my dotfiles
+
+### push_auto
+
+Automatically update my dotfiles in this repository and push them to github
+
+### pull_auto
+
+Automatically update local repository and copy dotfiles to home directory
+
 ## XmodMap
 
 `.Xmodmap` is used to remap `<ESC>` with `<CapsLock>`
