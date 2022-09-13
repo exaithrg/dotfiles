@@ -1,15 +1,9 @@
 # My Dotfiles
 **For linux configuration**
 
-## AutoUpdateTools
+## UpdateAuto
 
-### bkup_auto
-
-Automatically create backups of my dotfiles
-
-### push_auto
-
-Automatically update my dotfiles in this repository and push them to github
+Automatically update my dotfiles in this repository
 
 ## XmodMap
 
@@ -214,6 +208,7 @@ vnoremap <C-Y> "+y	"Vim Ctrl+C"
 vnoremap <C-D> "+d	"Vim Ctrl+X"
 nnoremap <C-P> "+p	"Vim Ctrl+V"
 nnoremap QQ :q!<CR>	"QQ not ZQ"
+^<hjkl> "switch windows"
 ```
 
 ### PluginShortcuts
@@ -273,6 +268,7 @@ map H previousTab
 map L nextTab
 map u scrollPageUp
 map d scrollPageDown
+^<hjkl> "switch windows"
 ```
 
 ## Tmux
@@ -280,14 +276,12 @@ map d scrollPageDown
 **shortcuts**
 
 ```css
-tmuxs 'tmux new -s'
-tmuxa 'tmux attach -t'
 ^b % "new split horizionally"
 ^b " "new split vertically"
 ^b ! "use current pane as new window"
 ^b ? "open help"
 ^b s "list all session"
-^b <arrow> "change pane"
+^b <arrow> "switch pane"
 ^b ^<arrow> "resize pane"
 ^b x "close current pane"
 ^d "close current pane"
@@ -306,22 +300,27 @@ tmux attach -t 0 "reenter a exist session"
 ^b w "select window"
 ^b s "select session"
 ^b : "enter cmd mode"
+^b [ "enter copy mode"
+^b z "maximum current pane"
 ```
 
 **myown**
 
 ```css
-^x "replace ^b"
+tm='tmux'
+tms='tmux new -s'
+tma='tmux attach -t'
+lstm='tmux ls'
+M-x=<a-x> "replace ^b"
 - "split vertically"
 | "split horizontally"
 <hjkl> "select pane"
-^<hjkl> "resize pane"
-^u "swap pane"
-^d "swap pane"
-e "last pane"
-^e "last window"
-q "kill pane"
-^q "kill window"
+^<hjkl> "switch windows"
+L "switch window"
+q "window left from SEKIRO"
+e "window right. from SEKIRO"
+W "new window"
+w "list window"
 ```
 
 ## RandomQuotes
