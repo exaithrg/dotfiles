@@ -89,8 +89,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Enable ghrtools, like autopush and autocmt
-PATH=$PATH:/home/geng/work/ghrtools
-export PATH
+# PATH=$PATH:/home/geng/work/ghrtools
+# export PATH
 
 # some more ls aliases
 alias ll='ls -ahlF'
@@ -102,6 +102,7 @@ alias tm='tmux'
 alias tms='tmux new -s'
 alias tma='tmux attach -t'
 alias lstm='tmux ls'
+alias gpsh='git push'
 alias gadd='git add .'
 alias gcmt='git commit -m'
 # alias scs='gnome-screenshot -a'
