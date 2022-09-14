@@ -54,10 +54,14 @@ set cmdheight=1 " 设定命令行的行数为 1
 set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " 设置在状态行显示的信息
 set mouse+=a
-set foldenable " 开始折叠
+
+" set foldclose=all "disable all fold, seems useless
 set foldmethod=syntax " 设置语法折叠
 set foldcolumn=0 " 设置折叠区域的宽度
 setlocal foldlevel=1 " 设置折叠层数为 1
+" set fen " fold enable, = set foldenable
+set nofen " do not fold anything, = set nofoldenable
+" autocmd FileType * exe "normal zR"
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格键来开关折叠
 
 " Unbind some useless/annoying default key bindings.
