@@ -72,6 +72,7 @@ nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 vnoremap <C-Y> "+y
 vnoremap <C-D> "+d
 nnoremap <C-P> "+p
+" nnoremap <A-Z> :set wrap! " useless. cannot switch. 
 
 nnoremap QQ :q!<CR>
 
