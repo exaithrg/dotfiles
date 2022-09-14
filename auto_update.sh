@@ -1,3 +1,4 @@
+# you can use 'yes | ./auto_update.sh' to avoid annoying Y/n
 echo "AUTO UPDATE BEGIN"
 cp -i ~/.bashrc dotfiles/.bashrc
 cp -i ~/.condarc dotfiles/.condarc
