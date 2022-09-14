@@ -1,13 +1,13 @@
 echo "AUTO UPDATE BEGIN"
-cp ~/.bashrc dotfiles/.bashrc
-cp ~/.condarc dotfiles/.condarc
-cp ~/.gitconfig dotfiles/.gitconfig
-cp ~/.inputrc dotfiles/.inputrc
-cp ~/.randomquotes dotfiles/.randomquotes
-cp ~/.tmux.conf dotfiles/.tmux.conf
-cp ~/.vimrc dotfiles/.vimrc
-cp ~/.Xmodmap dotfiles/.Xmodmap
-cp ~/.xinputrc dotfiles/.xinputrc
+cp -i ~/.bashrc dotfiles/.bashrc
+cp -i ~/.condarc dotfiles/.condarc
+cp -i ~/.gitconfig dotfiles/.gitconfig
+cp -i ~/.inputrc dotfiles/.inputrc
+cp -i ~/.randomquotes dotfiles/.randomquotes
+cp -i ~/.tmux.conf dotfiles/.tmux.conf
+cp -i ~/.vimrc dotfiles/.vimrc
+cp -i ~/.Xmodmap dotfiles/.Xmodmap
+cp -i ~/.xinputrc dotfiles/.xinputrc
 git add .
 git commit -m "auto update"
 echo "AUTO UPDATE FINISH"
