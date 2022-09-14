@@ -2,8 +2,8 @@
 set t_Co=256 
 if has("termguicolors")
     " fix bug for vim
-    " set t_8f=[38;2;%lu;%lu;%lum " ^[ is ^v+<ESC>
-    " set t_8b=[48;2;%lu;%lu;%lum " ^[ is ^v+<ESC>
+    set t_8f=[38;2;%lu;%lu;%lum " ^[ is ^v+<ESC>
+    set t_8b=[48;2;%lu;%lu;%lum " ^[ is ^v+<ESC>
     " enable true color
     set termguicolors
 endif
@@ -63,9 +63,12 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格�
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
+" :version must have '+clipboard'
+" If not, you mus install vim-gtk3
 vnoremap <C-Y> "+y
 vnoremap <C-D> "+d
 nnoremap <C-P> "+p
+
 nnoremap QQ :q!<CR>
 
 nnoremap <Left>  :echoe "Use h"<CR>
