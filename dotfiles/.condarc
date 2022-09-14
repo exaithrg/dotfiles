@@ -1,5 +1,5 @@
 channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/linux-64/
   - defaults
 show_channel_urls: true
 channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda
@@ -17,4 +17,5 @@ custom_channels:
   pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 ssl_verify: true
+
 auto_activate_base: false

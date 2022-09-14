@@ -31,6 +31,7 @@ set bufhidden=hide " 当buffer被丢弃的时候隐藏它
 set background=dark
 set number " Show line numbers.
 set relativenumber
+set nowrap " do not wrap lines
 set laststatus=2
 set backspace=indent,eol,start
 "set cursorline " 突出显示当前行

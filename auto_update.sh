@@ -7,6 +7,7 @@ cp ~/.randomquotes dotfiles/.randomquotes
 cp ~/.tmux.conf dotfiles/.tmux.conf
 cp ~/.vimrc dotfiles/.vimrc
 cp ~/.Xmodmap dotfiles/.Xmodmap
+cp ~/.xinputrc dotfiles/.xinputrc
 git add .
 git commit -m "auto update"
 echo "AUTO UPDATE FINISH"
