@@ -1,12 +1,21 @@
 echo "DIFF CHECK BEGIN"
+echo "----------.bashrc----------"
 diff ~/.bashrc dotfiles/.bashrc
+echo "----------.condarc----------"
 diff ~/.condarc dotfiles/.condarc
+echo "----------.gitconfig----------"
 diff ~/.gitconfig dotfiles/.gitconfig
+echo "----------.inputrc----------"
 diff ~/.inputrc dotfiles/.inputrc
+echo "----------.randomquotes----------"
 diff ~/.randomquotes dotfiles/.randomquotes
+echo "----------.tmux.conf----------"
 diff ~/.tmux.conf dotfiles/.tmux.conf
+echo "----------.vimrc----------"
 diff ~/.vimrc dotfiles/.vimrc
+echo "----------.Xmodmap----------"
 diff ~/.Xmodmap dotfiles/.Xmodmap
+echo "----------.xinputrc----------"
 diff ~/.xinputrc dotfiles/.xinputrc
 echo "DIFF CHECK END, MD5 CHECK BEGIN"
 md5sum ~/.bashrc dotfiles/.bashrc

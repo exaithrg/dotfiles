@@ -58,7 +58,8 @@ set editing-mode vi
 ### Shortcuts
 
 ```css
-hjkl "move the cursor"
+<hjkl>	 "move the cursor"
+z<hlseHL> "cursor left/right"
 ZQ=:q!<CR> "force quit"
 ZZ=:wq<CR> "write and quit"
 <ESC> "back to normal mode"
@@ -142,6 +143,7 @@ d$ "delete to the end of the line"
 ~ "flips the case of a character"
 gu{motion} "to lowercase"
 gU{motion} "to uppercase"
+gx "open a superlink in browser"
 <sym>=b() [] B{} <> '' ""
 ci<sym> "change in <sym>"
 di<sym> "delete in <sym>"
@@ -207,6 +209,8 @@ ww8sNEW<Esc><C-A>ZZ "A HAPPY NEW YEAR 2014 !"
 vnoremap <C-Y> "+y	"Vim Ctrl+C"
 vnoremap <C-D> "+d	"Vim Ctrl+X"
 nnoremap <C-P> "+p	"Vim Ctrl+V"
+nnoremap J zh	"cursor left"
+nnoremap K zl	"cursor right"
 nnoremap QQ :q!<CR>	"QQ not ZQ"
 ^<hjkl> "switch windows"
 ```
