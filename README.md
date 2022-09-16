@@ -59,7 +59,7 @@ set editing-mode vi
 
 ```css
 <hjkl>	 "move the cursor"
-z<hlseHL> "cursor left/right"
+z<hlseHL> "scroll left/right"
 ZQ=:q!<CR> "force quit"
 ZZ=:wq<CR> "write and quit"
 <ESC> "back to normal mode"
