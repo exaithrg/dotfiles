@@ -58,7 +58,7 @@ set editing-mode vi
 ### Shortcuts
 
 ```css
-<hjkl>	 "move the cursor"
+<hjkl> "move the cursor"
 z<hlseHL> "scroll left/right"
 ZQ=:q!<CR> "force quit"
 ZZ=:wq<CR> "write and quit"
@@ -144,7 +144,7 @@ d$ "delete to the end of the line"
 gu{motion} "to lowercase"
 gU{motion} "to uppercase"
 gx "open a superlink in browser"
-<sym>=b() [] B{} <> '' ""
+<sym>=b() [] B{} <> '' "" etc
 ci<sym> "change in <sym>"
 di<sym> "delete in <sym>"
 yi<sym> "copy in <sym>"
@@ -153,6 +153,10 @@ ca<sym> "change include <sym>"
 da<sym> "delete include <sym>"
 ya<sym> "copy include <sym>"
 va<sym> "selet include <sym>"
+ct<sym> "change to <sym>"
+dt<sym> "delete to <sym>"
+vt<sym> "select to <sym>"
+yt<sym> "copy to <sym>"
 qq "reg q recording start/stop "
 @q "exe reg q macro"
 <n>@q "exe reg q macro n times"
@@ -206,12 +210,12 @@ ww8sNEW<Esc><C-A>ZZ "A HAPPY NEW YEAR 2014 !"
 ### MyKeyMap
 
 ```css
-vnoremap <C-Y> "+y	"Vim Ctrl+C"
-vnoremap <C-D> "+d	"Vim Ctrl+X"
-nnoremap <C-P> "+p	"Vim Ctrl+V"
-nnoremap J zh	"cursor left"
-nnoremap K zl	"cursor right"
-nnoremap QQ :q!<CR>	"QQ not ZQ"
+vnoremap <C-Y> "+y "Vim Ctrl+C"
+vnoremap <C-D> "+d "Vim Ctrl+X"
+nnoremap <C-P> "+p "Vim Ctrl+V"
+nnoremap J zh "cursor left"
+nnoremap K zl "cursor right"
+nnoremap QQ :q!<CR> "QQ not ZQ"
 ^<hjkl> "switch windows"
 ```
 
