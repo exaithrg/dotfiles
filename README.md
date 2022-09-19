@@ -25,17 +25,23 @@ add Lock = Caps_Lock
 > If you’re a Bash user, use `set -o vi`. If you use Zsh, `bindkey -v`. For Fish, `fish_vi_key_bindings`. Additionally, no matter what shell you use, you can `export EDITOR=vim`. This is the environment variable used to decide which editor is launched when a program wants to start an editor. For example, `git` will use this editor for commit messages.
 
 ```bash
+# Enable ghrtools, like autopush and autocmt
+PATH=$PATH:/home/geng/work/ghrtools
+export PATH
+
 # some more ls aliases
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'
 alias sl='sl -e'
 alias ty='typora'
-alias lstmux='tmux ls'
-alias tmuxs='tmux new -s'
-alias tmuxa='tmux attach -t'
-alias gadd='git add .'
-alias gcmt='git commit -m'
+alias tm='tmux'
+alias tms='tmux new -s'
+alias tma='tmux attach -t'
+alias lstm='tmux ls'
+alias gp='git push'
+alias gad='git add .'
+alias gcm='git commit -m'
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
 # alias matg='cmatrix'
