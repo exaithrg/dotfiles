@@ -2,7 +2,7 @@
 echo "AUTO UPDATE BEGIN"
 cp -i ~/.bashrc dotfiles/.bashrc
 cp -i ~/.condarc dotfiles/.condarc
-cp -i ~/.gitconfig dotfiles/.gitconfig
+# cp -i ~/.gitconfig dotfiles/.gitconfig
 cp -i ~/.inputrc dotfiles/.inputrc
 cp -i ~/.randomquotes dotfiles/.randomquotes
 cp -i ~/.tmux.conf dotfiles/.tmux.conf
