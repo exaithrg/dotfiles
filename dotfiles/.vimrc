@@ -74,6 +74,10 @@ vnoremap <C-D> "+d
 nnoremap <C-P> "+p
 " nnoremap <A-Z> :set wrap! " useless. cannot switch. 
 
+nnoremap J <C-E>
+nnoremap K <C-Y>
+nnoremap H zh
+nnoremap L zl
 nnoremap QQ :q!<CR>
 
 nnoremap <Left>  :echoe "Use h"<CR>
