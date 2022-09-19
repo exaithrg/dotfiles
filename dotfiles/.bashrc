@@ -93,6 +93,7 @@ PATH=$PATH:/home/geng/work/ghrtools
 export PATH
 
 # some more ls aliases
+alias c='clear'
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'
