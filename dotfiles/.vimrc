@@ -68,9 +68,12 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格�
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
 " :version must have '+clipboard'
-" If not, you mus install vim-gtk3
+" If not, you must install vim-gtk3
+" Vim Ctrl+C
 vnoremap <C-Y> "+y
+" Vim Ctrl+X
 vnoremap <C-D> "+d
+" Vim Ctrl+V
 nnoremap <C-P> "+p
 " nnoremap <A-Z> :set wrap! " useless. cannot switch. 
 
