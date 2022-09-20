@@ -67,7 +67,7 @@ set incsearch " Incremental search
 setlocal noswapfile " 不要生成swap文件
 set bufhidden=hide " 当buffer被丢弃的时候隐藏它
 "colorscheme default " 设定配色方案
-set background=dark
+"set background=dark
 set number " Show line numbers.
 set relativenumber
 set nowrap " do not wrap lines
