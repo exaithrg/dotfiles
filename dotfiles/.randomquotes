@@ -37,7 +37,7 @@ case $n in
     25) echo -e "${YELLOW}Do it with passion or not at all.${RES}";;
     26) echo -e "${YELLOW}If it matters to you, you'll find a way.${RES}";;
     27) echo -e "${YELLOW}The past does not equal the future.${RES}";;
-    28) echo -e "${YELLOW}Dream without fear. love without limits.${RES}";;
+    28) echo -e "${YELLOW}Dream without fear. Love without limits.${RES}";;
     29) echo -e "${YELLOW}It is not the mountain we conquer but ourselves.${RES}";;
     30) echo -e "${YELLOW}Whatever you do, do with all your might.${RES}";;
     31) echo -e "${YELLOW}Every noble work is at first impossible.${RES}";;
