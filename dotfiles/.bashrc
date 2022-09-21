@@ -104,6 +104,7 @@ alias tms='tmux new -s'
 alias tma='tmux attach -t'
 alias tmls='tmux ls'
 alias gp='git push'
+alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
 # alias scs='gnome-screenshot -a'
@@ -152,8 +153,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-source ~/.randomquotes
-
 . /usr/share/autojump/autojump.sh
 
 # remap <ESC> and <CapsLock>
@@ -162,3 +161,5 @@ if [ -f ~/.Xmodmap ]; then xmodmap ~/.Xmodmap; fi
 set -o vi
 export EDITOR=vim
 
+clear
+source ~/.randomquotes
