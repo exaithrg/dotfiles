@@ -203,6 +203,7 @@ F1 "start help"
 ### LongerCommands
 
 ```css
+:%s/^v^m$//g "delete all ^M to fix LF and CRLF bug"
 %s/\[.*\](\(.*\))/\1/g "replace named Markdown links with plain URLs"
 i1<ESC>q1yyp<C-a>q98@1 "generate 1 to 100"
 <C-v>24l4jd$p "block select and repaste"
