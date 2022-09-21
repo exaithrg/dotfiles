@@ -116,6 +116,7 @@ vnoremap <C-D> "+d
 nnoremap <C-P> "+p
 " nnoremap <A-Z> :set wrap! " useless. cannot switch. 
 
+nnoremap <C-X> <C-M>
 nnoremap J <C-E>
 nnoremap K <C-Y>
 nnoremap H zh
