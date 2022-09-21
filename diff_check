@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "DIFF CHECK BEGIN"
 echo "----------.bashrc----------"
 diff ~/.bashrc dotfiles/.bashrc

@@ -1,4 +1,6 @@
-# you can use 'yes | ./auto_update.sh' to avoid annoying Y/n
+#!/bin/bash
+
+# you can use 'yes | ./auto_update' to avoid annoying Y/n
 
 RED='\e[1;31m'
 GREEN='\e[1;32m'

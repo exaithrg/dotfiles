@@ -77,13 +77,17 @@ vnoremap <C-D> "+d
 nnoremap <C-P> "+p
 " nnoremap <A-Z> :set wrap! " useless. cannot switch. 
 
-" <C-J> not work
+" M means minus.
+" C-X already used as tmux prefix.
+nnoremap <C-M> <C-X>
+
+" <C-J> has been used to switch panes.
 nnoremap J <C-E> 
-" <C-K> not work
+" <C-K> has been used to switch panes.
 nnoremap K <C-Y> 
-" <C-H> not work
+" <C-H> has been used to switch panes.
 nnoremap H zh 
-" <C-L> not work
+" <C-L> has been used to switch panes.
 nnoremap L zl 
 
 nnoremap QQ :q!<CR>
