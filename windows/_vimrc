@@ -111,6 +111,7 @@ vnoremap <C-Y> "+y
 vnoremap <C-D> "+d
 " Vim Ctrl+V
 nnoremap <C-P> "+p
+" :set wrap! is good, but alt not work.
 " nnoremap <M-Z> :set wrap! " useless. cannot switch. 
 
 " M means minus.
