@@ -25,45 +25,45 @@ set hidden " Hide buffers when they are abandoned
 set ignorecase " Do case insensitive matching
 set smartcase " Do smart case matching
 set incsearch " Incremental search
-setlocal noswapfile " 不要生成swap文件
-set bufhidden=hide " 当buffer被丢弃的时候隐藏它
-"colorscheme default " 设定配色方案
+setlocal noswapfile 
+set bufhidden=hide "hide buffer when it be discarded
+"colorscheme default
 set background=dark
 set number " Show line numbers.
 set relativenumber
 set nowrap " do not wrap lines
 set laststatus=2
 set backspace=indent,eol,start
-"set cursorline " 突出显示当前行
-set ruler " 打开状态栏标尺
-set shiftwidth=4 " 设定 << 和 >> 命令移动时的宽度为 4
-set softtabstop=4 " 使得按退格键时可以一次删掉 4 个空格
-set tabstop=4 " 设定 tab 长度为 4
-set nobackup " 覆盖文件时不备份
-set autochdir " 自动切换当前目录为当前文件所在的目录
-set backupcopy=yes " 设置备份时的行为为覆盖
+"set cursorline "show a long annoying line. 
+set ruler " show command line ruler
+set shiftwidth=4 "<< and >> width: 4
+set softtabstop=4 " backspace width: 4
+set tabstop=4 " tab width: 4
+set nobackup " do not backup files when overwrite
+set autochdir " auto switch work dir as current dir
+set backupcopy=yes " overwrite as backup??
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb= 
-"set noerrorbells " 关闭错误信息响铃
-"set novisualbell " 关闭使用可视响铃代替呼叫
-"set t_vb= " 置空错误铃声的终端代码
-set matchtime=2 " 短暂跳转到匹配括号的时间
-"set magic " 设置魔术
-set smartindent " 开启新行时使用智能自动缩进
-set cmdheight=1 " 设定命令行的行数为 1
-set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
-set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " 设置在状态行显示的信息
+"set noerrorbells
+"set novisualbell
+"set t_vb= 
+set matchtime=2 " time to jump to corresponding branket
+"set magic
+set smartindent
+set cmdheight=1
+set laststatus=2 " show status line, defaulte is 1(hidden)
+set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " what shows on status line
 set mouse+=a
 set scrolloff=10
 
 " set foldclose=all "disable all fold, seems useless
-set foldmethod=syntax " 设置语法折叠
-set foldcolumn=0 " 设置折叠区域的宽度
-setlocal foldlevel=1 " 设置折叠层数为 1
+set foldmethod=syntax 
+set foldcolumn=0 
+setlocal foldlevel=1 
 " set fen " fold enable, = set foldenable
 set nofen " do not fold anything, = set nofoldenable
 " autocmd FileType * exe "normal zR"
-nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格键来开关折叠
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " use space to turn on/off fold
 
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
@@ -76,18 +76,23 @@ vnoremap <C-Y> "+y
 vnoremap <C-D> "+d
 " Vim Ctrl+V
 nnoremap <C-P> "+p
-" nnoremap <A-Z> :set wrap! " useless. cannot switch. 
+" nnoremap <M-Z> :set wrap! " useless. cannot switch. 
 
 " M means minus.
 " C-X already used as tmux prefix.
 nnoremap <C-M> <C-X>
 
+nnoremap <C-D> <C-D>zz
+nnoremap <C-U> <C-U>zz
+nnoremap <C-F> <C-F>zz
+nnoremap <C-B> <C-B>zz
+
 " Keep cursor in the middle all the time
-nnoremap <A-k> kzz
-nnoremap <A-j> jzz
-nnoremap <A-p> pzz
-nnoremap <A-P> Pzz
-nnoremap <A-G> Gzz
+" nnoremap <M-k> kzz
+" nnoremap <M-j> jzz
+" nnoremap <M-p> pzz
+" nnoremap <M-P> Pzz
+" nnoremap <M-G> Gzz
 " nnoremap x xzz
 " inoremap <ESC> <ESC>zz
 " nnoremap <ENTER> <ENTER>zz
