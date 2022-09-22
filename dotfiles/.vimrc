@@ -54,7 +54,7 @@ set cmdheight=1 " 设定命令行的行数为 1
 set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " 设置在状态行显示的信息
 set mouse+=a
-set scrolloff=7
+set scrolloff=10
 
 " set foldclose=all "disable all fold, seems useless
 set foldmethod=syntax " 设置语法折叠
@@ -82,6 +82,22 @@ nnoremap <C-P> "+p
 " C-X already used as tmux prefix.
 nnoremap <C-M> <C-X>
 
+" Keep cursor in the middle all the time
+nnoremap <A-k> kzz
+nnoremap <A-j> jzz
+nnoremap <A-p> pzz
+nnoremap <A-P> Pzz
+nnoremap <A-G> Gzz
+" nnoremap x xzz
+" inoremap <ESC> <ESC>zz
+" nnoremap <ENTER> <ENTER>zz
+" inoremap <ENTER> <ENTER><ESC>zzi
+" nnoremap o o<ESC>zza
+nnoremap o o<ESC>
+" nnoremap O O<ESC>zza
+nnoremap O O<ESC>
+" nnoremap a a<ESC>zza
+
 " <C-J> has been used to switch panes.
 nnoremap J <C-E> 
 " <C-K> has been used to switch panes.
@@ -91,6 +107,11 @@ nnoremap H zh
 " <C-L> has been used to switch panes.
 nnoremap L zl 
 
+noremap = nzz
+noremap - Nzz
+
+" carefully use ZZ, ZZ may cause unanticipated exits.
+nnoremap ZZ :echoe "Use :wq"<CR>
 nnoremap QQ :q!<CR>
 
 nnoremap <Left>  :echoe "Use h"<CR>
