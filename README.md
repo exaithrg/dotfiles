@@ -201,7 +201,36 @@ F1 "start help"
 :help user-manual "getting help"
 ```
 
-### LongerCommands
+### MyKeyMap
+
+```css
+^<hjkl> "switch windows"
+nmap Q <Nop>
+vnoremap <C-Y> "+y
+vnoremap <C-D> "+d
+nnoremap <C-P> "+p
+nnoremap <C-M> <C-X>
+nnoremap <C-D> <C-D>zz
+nnoremap <C-U> <C-U>zz
+nnoremap <C-F> <C-F>zz
+nnoremap <C-B> <C-B>zz
+nnoremap o o<ESC>
+nnoremap O O<ESC>
+nnoremap J <C-E> 
+nnoremap K <C-Y> 
+nnoremap H zh 
+nnoremap L zl 
+noremap = nzz
+noremap - Nzz
+nnoremap ZZ :echoe "Use :wq"<CR>
+nnoremap QQ :q!<CR>
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
+```
+
+### LongCommands
 
 ```css
 :%s/^v^m$//g "delete all ^M to fix LF and CRLF bug"
@@ -215,20 +244,6 @@ qa3jYjVpq2@aZZ "https://www.vimgolf.com/challenges/4d1a34ccfa85f32065000004"
 qa5wlguwwl.wl.0jq7@a5Gfl~ZZ "https://www.vimgolf.com/challenges/5ed621c31a86b700094a80ec"
 oCOLORS = {<Esc>qq<CR>i  '<Esc>ElcW': '<Esc>A',<Esc>@qq@qo<BS><BS>}<Esc>ZZ "https://www.vimgolf.com/challenges/5f1e93e8becb80000992ba98"
 ww8sNEW<Esc><C-A>ZZ "https://www.vimgolf.com/challenges/52c3cb0d9b8634000200000e"
-```
-
-### MyKeyMap
-
-```css
-vnoremap <C-Y> "+y "Vim Ctrl+C"
-vnoremap <C-D> "+d "Vim Ctrl+X"
-nnoremap <C-P> "+p "Vim Ctrl+V"
-nnoremap J <C-E> "scroll down"
-nnoremap K <C-Y> "scroll up"
-nnoremap H zh "scroll left"
-nnoremap L zl "scroll right"
-nnoremap QQ :q!<CR> "QQ not ZQ"
-^<hjkl> "switch windows"
 ```
 
 ### PluginShortcuts
