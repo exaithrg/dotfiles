@@ -54,7 +54,7 @@ set cmdheight=1
 set laststatus=2 " show status line, defaulte is 1(hidden)
 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " what shows on status line
 set mouse+=a
-set scrolloff=10
+set scrolloff=7
 
 " set foldclose=all "disable all fold, seems useless
 set foldmethod=syntax 
