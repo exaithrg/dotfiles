@@ -29,22 +29,30 @@ add Lock = Caps_Lock
 PATH=$PATH:/home/geng/work/ghrtools
 export PATH
 
-# some more ls aliases
+# User specific aliases and functions
+clsourquotes() {
+	clear
+	source ~/.randomquotes;
+}
+alias c='clsourquotes'
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'
 alias sl='sl -e'
+# alias sed='sed -E'
 alias ty='typora'
 alias tm='tmux'
 alias tms='tmux new -s'
 alias tma='tmux attach -t'
-alias lstm='tmux ls'
+alias tmls='tmux ls'
 alias gp='git push'
+alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
 # alias matg='cmatrix'
+
 set -o vi
 export EDITOR=vim
 ```
