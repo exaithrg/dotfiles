@@ -15,6 +15,7 @@ filetype plugin on
 filetype plugin indent on
 
 syntax on
+" or syntax enable
 
 " default leader key is /, we use space.
 let mapleader=" "
@@ -30,7 +31,6 @@ set ignorecase " Do case insensitive matching
 set incsearch " Incremental search
 setlocal noswapfile 
 set bufhidden=hide "hide buffer when it be discarded
-"colorscheme default
 set background=dark
 set number " Show line numbers.
 set relativenumber
@@ -50,6 +50,7 @@ set backupcopy=yes " overwrite as backup??
 set noerrorbells visualbell t_vb= 
 set matchtime=2 " time to jump to corresponding branket
 "set magic
+set updatetime=100 "default=4000, 4 secs. 
 set smartindent
 set cmdheight=1
 set laststatus=2 " show status line, defaulte is 1(hidden)
@@ -65,6 +66,13 @@ setlocal foldlevel=1
 set nofen " do not fold anything, = set nofoldenable
 " autocmd FileType * exe "normal zR"
 
+highlight clear LineNr
+highlight clear SignColumn
+" highlight Visual cterm=bold ctermbg=LightBlue ctermfg=NONE
+" hi Visual guifg=none guibg=LightBlue gui=none
+" hi Visual cterm=none ctermbg=LightBlue ctermfg=none guibg=DarkGray
+" hi Visual term=reverse cterm=reverse ctermbg=black guibg=grey60
+
 " use space to turn on/off fold
 " nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> 
 
@@ -79,7 +87,7 @@ vnoremap <C-Y> "+y
 vnoremap <C-D> "+d
 " Vim Ctrl+V
 nnoremap <C-P> "+p
-inoremap <C-P> <ESC>"+p"
+inoremap <C-P> <ESC>"+p
 
 " :set wrap! is ok, but alt not work.
 " nnoremap <M-Z> :set wrap! " useless. cannot switch. 
@@ -160,6 +168,12 @@ Plug 'preservim/nerdtree'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
+" Start NERDTree and put the cursor back in the other window.
+" autocmd VimEnter * NERDTree | wincmd p
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
 " :NERDTree to open
 " ? to turn on the quick help
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -185,49 +199,133 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"设置error和warning的标志
-let g:syntastic_enable_signs = 1
-let g:syntastic_error_symbol='?'
-let g:syntastic_warning_symbol='?'
-"no-unused-args 忽略不使用的参数
-"no-redefined 忽略重定义
-"no-max-line-length 忽略每行最长的检测
-"ignore 542 551 忽略if条件的body为空(如...elseif ret == nil then end，then和end中间没有语句)；忽略空语句(如;)，如果用了;则成对出现该语法检测warning
-"有语法错误的一行左侧栏会有S&gt;标识，光标移动到改行，vim下发会给出提示。修改正确后保存，则该'S&gt;'会消失。
-let g:syntastic_lua_checkers = ["/usr/bin/luac5.3.5", "luacheck"]
-let g:syntastic_lua_luacheck_args = "--codes --no-max-comment-line-length --ignore 542 551"
+"
+" " change error and warning symbol
+" let g:syntastic_enable_signs = 1
+" let g:syntastic_error_symbol='?'
+" let g:syntastic_warning_symbol='?'
+"
+" "no-unused-args
+" "no-redefined
+" "no-max-line-length
+" "ignore 542 551
+" "542 551: if body is empty. ignore these warnings.
+" let g:syntastic_lua_checkers = ["/usr/bin/luac5.3.5", "luacheck"]
+" let g:syntastic_lua_luacheck_args = "--codes --no-max-comment-line-length --ignore 542 551"
+"
+" "c
+" "let g:syntastic_c_compiler =['gcc', 'clang', 'make']
+" "let g:syntastic_c_compiler_options ='-Wpedantic -g'
+" let g:syntastic_c_compiler_options ='-std=gnu99'
+" let g:syntastic_c_include_dirs=['/usr/include/']
+" let g:syntastic_c_config_file='.syntastic_c_config_file'
+"
+" "cpp
+" let g:syntastic_cpp_include_dirs = ['/usr/include/']
+" let g:syntastic_cpp_remove_include_errors = 1
+" let g:syntastic_cpp_check_header = 1
+" let g:syntastic_cpp_compiler = 'clang++'
+" let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
+" " syntastic end
 
-"c
-"let g:syntastic_c_compiler =['gcc', 'clang', 'make']
-"let g:syntastic_c_compiler_options ='-Wpedantic -g'
-let g:syntastic_c_compiler_options ='-std=gnu99'
-let g:syntastic_c_include_dirs=['/usr/include/']
-let g:syntastic_c_config_file='.syntastic_c_config_file'
-
-"cpp
-let g:syntastic_cpp_include_dirs = ['/usr/include/']
-let g:syntastic_cpp_remove_include_errors = 1
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
-" syntastic end
+" https://vimawesome.com/plugin/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
+" let g:gitgutter_set_sign_backgrounds = 1
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 Plug 'vim-airline/vim-airline'
-Plug 'airblade/vim-gitgutter'
-"Plug 'lervag/vimtex'
-"Plug 'godlygeek/tabular'
-"Plug 'altercation/vim-colors-solarized'
-"Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline-themes'
+"let g:airline_theme='simple'
+let g:airline_theme='badwolf'
 
-"Plug 'ctrlpvim/ctrlp.vim'
-"let g:ctrlp_map = '<c-p>' " do not use <c-p> as ^p for paste
-"let g:ctrlp_cmd = 'CtrlP'
+Plug 'scrooloose/nerdcommenter'
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+" let g:NERDAltDelims_java = 1
+" Add your own custom formats or override the defaults
+" let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+" Plug 'majutsushi/tagbar'
+" nmap <F8> :TagbarToggle<CR>
+
+" apt install build-essential cmake vim-nox python3-dev
+" apt install mono-complete golang nodejs default-jdk npm
+Plug 'valloric/youcompleteme'
+
+Plug 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = 'context'
+
+Plug 'ctrlpvim/ctrlp.vim'
+" do not use <c-p> as ^p for paste
+let g:ctrlp_map = '<c-n>' 
+let g:ctrlp_cmd = 'CtrlP'
+
+Plug 'godlygeek/tabular'
+
+" https://vimawesome.com/plugin/vim-colorschemes-sweeter-than-fiction
+Plug 'flazz/vim-colorschemes'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'tomasr/molokai'
+" colorscheme solarized
+" colorscheme solarized
+" colorscheme default
+colorscheme molokai
+
+Plug 'easymotion/vim-easymotion'
+Plug 'junegunn/fzf'
+
+"Plug 'lervag/vimtex'
 
 Plug 'plasticboy/vim-markdown'
+
+" npm -g install instant-markdown-d
+" apt install yarn
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+" Uncomment to override defaults:
+" let g:instant_markdown_slow = 1
+" let g:instant_markdown_autostart = 0
+" let g:instant_markdown_open_to_the_world = 1
+" let g:instant_markdown_allow_unsafe_content = 1
+" let g:instant_markdown_allow_external_content = 0
+" let g:instant_markdown_mathjax = 1
+" let g:instant_markdown_mermaid = 1
+" let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+" let g:instant_markdown_autoscroll = 0
+" let g:instant_markdown_port = 8888
+" let g:instant_markdown_python = 1
+
+" apt install xclip
 Plug 'ferrine/md-img-paste.vim'
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+" there are some defaults for image directory and image name, you can change them
+" let g:mdip_imgdir = 'img'
+" let g:mdip_imgname = 'image'
+
 "Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
+
+" Vim addons helpful for v/sv
+Plug 'vhda/verilog_systemverilog.vim'
+runtime macros/matchit.vim
+" Plug 'vimtaku/hl_matchit.vim'
+" Plug 'konfekt/fastfold'
+
 
 call plug#end()
 
