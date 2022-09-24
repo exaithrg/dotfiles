@@ -119,6 +119,7 @@ n "next search"
 N "backward next search"
 % "find a matching bracket"
 ^ "go to the first NOT blank char"
+g_ "go to the last NOT blank char"
 0 "move to the start of the line"
 $ "go to end of a line"
 gg "go to start of the file"
@@ -209,19 +210,16 @@ nmap Q <Nop>
 vnoremap <C-Y> "+y
 vnoremap <C-D> "+d
 nnoremap <C-P> "+p
+inoremap <C-P> <ESC>"+p
 nnoremap <C-M> <C-X>
 nnoremap <C-D> <C-D>zz
 nnoremap <C-U> <C-U>zz
 nnoremap <C-F> <C-F>zz
 nnoremap <C-B> <C-B>zz
-nnoremap o o<ESC>
-nnoremap O O<ESC>
-nnoremap J <C-E> 
-nnoremap K <C-Y> 
-nnoremap H zh 
-nnoremap L zl 
-noremap = nzz
-noremap - Nzz
+nnoremap J <C-E>
+nnoremap K <C-Y>
+nnoremap H zh
+nnoremap L zl
 nnoremap ZZ :echoe "Use :wq"<CR>
 nnoremap QQ :q!<CR>
 nnoremap <Left>  :echoe "Use h"<CR>
@@ -233,8 +231,8 @@ nnoremap <Down>  :echoe "Use j"<CR>
 ### LongCommands
 
 ```css
+vim -b filename "can show ^M"
 :%s/^v^m$//g "delete all ^M to fix LF and CRLF bug"
-:%s/<regex>//gn "Count the number of occurrences of <regex>"
 %s/\[.*\](\(.*\))/\1/g "replace named Markdown links with plain URLs"
 i1<ESC>q1yyp<C-a>q98@1 "generate 1 to 100"
 <C-v>24l4jd$p "block select and repaste"
@@ -254,6 +252,13 @@ ww8sNEW<Esc><C-A>ZZ "https://www.vimgolf.com/challenges/52c3cb0d9b8634000200000e
 :PlugStatus
 :PlugClean
 :PlugUpdate
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>m :NERDTree<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+let g:ctrlp_map = '<c-n>' 
+<leader>cc "comment lines"
+<leader>c<leader> "uncomment lines"
 ```
 
 ### Vimium
