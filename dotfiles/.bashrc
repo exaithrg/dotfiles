@@ -92,8 +92,12 @@ fi
 PATH=$PATH:/home/geng/work/ghrtools
 export PATH
 
-# some more ls aliases
-alias c='clear'
+# User specific aliases and functions
+clsourquotes() {
+	clear
+	source ~/.randomquotes;
+}
+alias c='clsourquotes'
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'
