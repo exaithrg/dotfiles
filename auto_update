@@ -23,5 +23,5 @@ cp -i ~/.xinputrc dotfiles/.xinputrc
 # git commit -m "auto update"
 echo "AUTO UPDATE FINISH"
 # echo "Please use git push if anything changed."
-echo -e "${PINK}PLEASE USE GIT TO UPDATE${RES}"
+echo -e "${PINK}PLEASE USE GIT(like autopush) TO UPDATE${RES}"
 
