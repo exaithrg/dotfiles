@@ -50,7 +50,7 @@ set backupcopy=yes " overwrite as backup??
 set noerrorbells visualbell t_vb= 
 set matchtime=2 " time to jump to corresponding branket
 "set magic
-set updatetime=100 "default=4000, 4 secs. 
+"set updatetime=100 "default=4000, 4 secs. 
 set smartindent
 set cmdheight=1
 set laststatus=2 " show status line, defaulte is 1(hidden)
@@ -189,16 +189,16 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 " Plug 'ryanoasis/vim-devicons'
 
 " https://vimawesome.com/plugin/syntastic
-Plug 'scrooloose/syntastic'
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Plug 'scrooloose/syntastic'
+" " syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+"
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 "
 " " change error and warning symbol
 " let g:syntastic_enable_signs = 1
