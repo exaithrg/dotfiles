@@ -29,7 +29,6 @@ set hidden " Hide buffers when they are abandoned
 " set smartcase " Do smart case matching
 set ignorecase " Do case insensitive matching
 set incsearch " Incremental search
-setlocal noswapfile 
 set bufhidden=hide "hide buffer when it be discarded
 set background=dark
 set number " Show line numbers.
@@ -39,11 +38,11 @@ set laststatus=2
 set backspace=indent,eol,start
 "set cursorline "show a long annoying line. 
 set ruler " show command line ruler
+set expandtab " change tab to space automatically
 set shiftwidth=4 "<< and >> width: 4
 set softtabstop=4 " backspace width: 4
 set tabstop=4 " tab width: 4
 set textwidth=0 " do not automatically broke long lines.
-set nobackup " do not backup files when overwrite
 set autochdir " auto switch work dir as current dir
 set backupcopy=yes " overwrite as backup??
 " Disable audible bell because it's annoying.
@@ -65,6 +64,18 @@ setlocal foldlevel=1
 " set fen " fold enable, = set foldenable
 set nofen " do not fold anything, = set nofoldenable
 " autocmd FileType * exe "normal zR"
+
+" Undo, Swap, and Backup Settings
+" setlocal noswapfile 
+" set nobackup " do not backup files when overwrite
+set swapfile
+" swpdir// is different from swpdir
+" // means file names contain Absolute PATH
+set directory=~/.vim/swpdir//
+set backup
+set backupdir=~/.vim/backupdir//
+set undofile " Maintain undo history between sessions
+set undodir=~/.vim/undodir//
 
 highlight clear LineNr
 highlight clear SignColumn
@@ -90,7 +101,7 @@ nnoremap <C-P> "+p
 inoremap <C-P> <ESC>"+p
 
 " :set wrap! is ok, but alt not work.
-" nnoremap <M-Z> :set wrap! " useless. cannot switch. 
+nnoremap <C-W> :set wrap!<CR>
 
 " M means minus.
 " C-X used as tmux prefix.
