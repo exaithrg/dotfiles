@@ -388,7 +388,13 @@ Switch between vim and tmux panes: **[vim-tmux-navigator](https://github.com/chr
 
 **[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)** [ Highly recommended! ] 
 
+[Your unofficial guide to dotfiles on GitHub](https://dotfiles.github.io/)
+
 MIT instructors’ dotfiles ([Anish](https://github.com/anishathalye/dotfiles), [Jon](https://github.com/jonhoo/configs), [Jose](https://github.com/JJGO/dotfiles)) 
+
+[mathiasbynens](https://github.com/mathiasbynens)/**[dotfiles](https://github.com/mathiasbynens/dotfiles)**
+
+[Tons of dotfiles on GitHub](https://github.com/search?o=desc&q=dotfiles&s=stars&type=Repositories)
 
 [XuXiaoDong's tmux configuration](https://github.com/xuxiaodong/tmuxen)
 
