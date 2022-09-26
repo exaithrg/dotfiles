@@ -93,6 +93,10 @@ PATH=$PATH:/home/geng/githubrepos/ghrtools
 export PATH
 
 # User specific aliases and functions
+# To ignore alias, run cmd prepened with \
+# or disable an alias altogether with unalias
+# To get alias def, just use alias name
+# alias name='' or name="" both ok
 clsourquotes() {
 	clear
 	source ~/.randomquotes;
@@ -102,12 +106,17 @@ alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'
 alias sl='sl -e'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+alias df='df -h'
 # alias sed='sed -E'
+alias v='vim'
 alias ty='typora'
 alias tm='tmux'
 alias tms='tmux new -s'
-alias tma='tmux attach -t'
+alias tma='tmux attach -t' # = tmux a -t
 alias tmls='tmux ls'
+alias gs='git status'
 alias gp='git push'
 alias gpl='git pull'
 alias gad='git add .'
