@@ -92,39 +92,17 @@ fi
 PATH=$PATH:/home/geng/githubrepos/ghrtools
 export PATH
 
-# User specific aliases and functions
-# To ignore alias, run cmd prepened with \
-# or disable an alias altogether with unalias
-# To get alias def, just use alias name
-# alias name='' or name="" both ok
-clsourquotes() {
-	clear
-	source ~/.randomquotes;
-}
-alias c='clsourquotes'
-alias ll='ls -ahlF'
-alias la='ls -A'
-alias l='ls -CF'
-alias sl='sl -e'
-alias mv='mv -i'
-alias mkdir='mkdir -p'
-alias df='df -h'
-# alias sed='sed -E'
-alias v='vim'
-alias ty='typora'
-alias tm='tmux'
-alias tms='tmux new -s'
-alias tma='tmux attach -t' # = tmux a -t
-alias tmls='tmux ls'
-alias gs='git status'
-alias gp='git push'
-alias gpl='git pull'
-alias gad='git add .'
-alias gcm='git commit -m'
-# alias scs='gnome-screenshot -a'
-# alias matr='cmatrix -r'
-# alias matg='cmatrix'
+# Test if ~/.aliases exists and source it
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
 
+# portable settings below
+# if [[ "$(uname)" == "Linux" ]]; then {do_something}; fi
+# # Check before using shell-specific features
+# if [[ "$SHELL" == "zsh" ]]; then {do_something}; fi
+# # You can also make it machine-specific
+# if [[ "$(hostname)" == "myServer" ]]; then {do_something}; fi
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

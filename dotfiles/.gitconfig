@@ -5,3 +5,6 @@
 	editor = vim
 [color]
 	ui = true
+; portable settings
+; [include]
+;     path = ~/.gitconfig_local

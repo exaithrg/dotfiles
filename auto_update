@@ -10,6 +10,7 @@ PINK='\e[1;35m'
 RES='\e[0m'
 
 echo "AUTO UPDATE BEGIN"
+cp -i ~/.aliases dotfiles/.aliases
 cp -i ~/.bashrc dotfiles/.bashrc
 cp -i ~/.condarc dotfiles/.condarc
 cp -i ~/.gitconfig dotfiles/.gitconfig
