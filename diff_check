@@ -21,6 +21,8 @@ echo "----------.Xmodmap----------"
 diff ~/.Xmodmap dotfiles/.Xmodmap
 echo "----------.xinputrc----------"
 diff ~/.xinputrc dotfiles/.xinputrc
+echo "----------.ssh/config----------"
+diff ~/.ssh/config dotfiles/.ssh/config
 echo "DIFF CHECK END, MD5 CHECK BEGIN"
 md5sum ~/.aliases dotfiles/.aliases
 md5sum ~/.bashrc dotfiles/.bashrc
@@ -32,4 +34,5 @@ md5sum ~/.tmux.conf dotfiles/.tmux.conf
 md5sum ~/.vimrc dotfiles/.vimrc
 md5sum ~/.Xmodmap dotfiles/.Xmodmap
 md5sum ~/.xinputrc dotfiles/.xinputrc
+md5sum ~/.ssh/config dotfiles/.ssh/config
 echo "MD5CHECK END"

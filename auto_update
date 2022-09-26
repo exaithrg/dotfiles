@@ -20,6 +20,7 @@ cp -i ~/.tmux.conf dotfiles/.tmux.conf
 cp -i ~/.vimrc dotfiles/.vimrc
 cp -i ~/.Xmodmap dotfiles/.Xmodmap
 cp -i ~/.xinputrc dotfiles/.xinputrc
+cp -i ~/.ssh/config dotfiles/.ssh/config
 # git add .
 # git commit -m "auto update"
 echo "AUTO UPDATE FINISH"
