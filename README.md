@@ -1,6 +1,8 @@
 # My Dotfiles
 **For linux configuration**
 
+**NOTE**: Dotfiles should be in their own folder, under version control, and **symlinked** into place using a script.
+
 ## AutoUpdate
 
 Automatically update my dotfiles in this repository
