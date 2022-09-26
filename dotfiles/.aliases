@@ -8,9 +8,10 @@ clsourquotes() {
 	source ~/.randomquotes;
 }
 alias c='clsourquotes'
-alias ll='ls -ahlF'
-alias la='ls -A'
 alias l='ls -CF'
+alias ll='ls -ahF'
+alias lll='ll -l'
+alias la='ls -A'
 alias sl='sl -e'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
