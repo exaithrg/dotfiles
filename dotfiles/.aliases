@@ -7,13 +7,14 @@ clsourquotes() {
 	clear
 	source ~/.randomquotes;
 }
-alias c='clsourquotes'
+alias cl='clsourquotes'
 alias l='ls -CF'
 alias ll='ls -ahF'
 alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'
 alias mv='mv -i'
+alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias df='df -h'
 # alias sed='sed -E'
