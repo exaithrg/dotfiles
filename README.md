@@ -327,42 +327,50 @@ map d scrollPageDown
 **shortcuts**
 
 ```css
+FOR SESSIONS
+tmux new -s <name> "new session"
+tmux ls "list all session"
+tmux attach -t <name> "reenter a exist session"
+tmux a "attaches the last session"
+^b d "detach a session"
+^b s "list and select session"
+FOR WINDOWS
+^b c "new window"
+^b N "go to Nth window"
+^b p "previous window"
+^b n "next window"
+^b , "rename window"
+^b w "list and select windows"
+^b l "switch window"
+^b & "close current window"
+FOR PANES
 ^b % "new split horizionally"
 ^b " "new split vertically"
-^b ! "use current pane as new window"
-^b ? "open help"
-^b s "list all session"
 ^b <arrow> "switch pane"
 ^b ^<arrow> "resize pane"
 ^b x "close current pane"
 ^d "close current pane"
 ^b ; "to previous pane"
 ^b o "to next pane"
-tmux new -s <session-name> "new session"
-^b d "detach a session"
-tmux ls "list all session"
-tmux attach -t 0 "reenter a exist session"
-^b c "new window"
-^b p "previous window"
-^b n "next window"
-^b l "switch window"
-^b & "close current window"
-^b , "rename window"
-^b w "select window"
-^b s "select session"
-^b : "enter cmd mode"
 ^b [ "enter copy mode"
-^b z "maximum current pane"
+q "quit copy mode"
+^b <space> "cycle through pane arrangements"
+^b ! "use current pane as new window"
+^b z "toggle maximum current pane"
+OTHERS
+^b ? "open help"
+^b : "enter cmd mode"
 ```
 
 **myown**
 
 ```css
-tm='tmux'
-tms='tmux new -s'
-tma='tmux attach -t'
-lstm='tmux ls'
-M-x=<a-x> "replace ^b"
+alias tm='tmux'
+alias tms='tmux new -s'
+alias tma='tmux attach -t' # = tmux a -t
+alias tmk='tmux kill-session -t'
+alias tmls='tmux ls'
+^x "prefix"
 - "split vertically"
 | "split horizontally"
 <hjkl> "select pane"
