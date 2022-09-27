@@ -32,7 +32,7 @@ mkdir -p ~/.vim/backupdir
 mkdir -p ~/.vim/swpdir
 mkdir -p ~/.vim/undodir
 
-PROGRAMS=(bash conda csh env git tmux vim)
+PROGRAMS=(bash conda csh env git tmux vim zsh)
 
 for program in ${PROGRAMS[@]}; do
   echo "Configuring $program"
