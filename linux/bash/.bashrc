@@ -129,6 +129,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 export NEMU_HOME=/home/geng/work/ysyx/ysyx-workbench/nemu
 export AM_HOME=/home/geng/work/ysyx/ysyx-workbench/abstract-machine
 
