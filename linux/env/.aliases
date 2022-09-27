@@ -31,19 +31,24 @@ alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias df='df -h'
 # alias sed='sed -E'
+
 alias v='vim'
 alias ty='typora'
+
 alias tm='tmux'
 alias tms='tmux new -s'
 alias tma='tmux attach -t' # = tmux a -t
 alias tmk='killmanytmuxsessions'
 alias tmkall='tmux kill-server'
 alias tmls='tmux ls'
+
 alias gs='git status'
 alias gp='git push'
 alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
+
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
 # alias matg='cmatrix'
+
