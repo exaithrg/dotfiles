@@ -21,6 +21,7 @@ backup_if_exists ~/.condarc
 backup_if_exists ~/.cshrc
 backup_if_exists ~/.gitconfig
 backup_if_exists ~/.inputrc
+backup_if_exists ~/.profile
 backup_if_exists ~/.randomquotes
 backup_if_exists ~/.tmux.conf
 backup_if_exists ~/.vimrc

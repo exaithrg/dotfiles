@@ -149,11 +149,8 @@ unset __conda_setup
 
 . /usr/share/autojump/autojump.sh
 
-# remap <ESC> and <CapsLock>
-if [ -f ~/.Xmodmap ]; then xmodmap ~/.Xmodmap; fi
-
 set -o vi
 export EDITOR=vim
 
-clear
-source ~/.randomquotes
+# clear
+# source ~/.randomquotes

@@ -144,6 +144,8 @@ nnoremap L zl
 nnoremap ZZ :echoe "Use :wq"<CR>
 nnoremap QQ :q!<CR>
 
+nnoremap q: :echoe "q: not found"<CR>
+
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
