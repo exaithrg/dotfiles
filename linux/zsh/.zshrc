@@ -108,7 +108,18 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+# Enable ghrtools, like autopush and autocmt
+if [[ "$(hostname)" == "GHR-UM" ]]; then {
+    PATH=$PATH:/home/geng/githubrepos/dotfiles/linux/scripts/ghrtools
+    export PATH
+}; fi
+
+# Test if ~/.aliases exists and source it
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
+
+bindkey -v
+
 
