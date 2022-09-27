@@ -36,8 +36,8 @@ mkdir -p ~/.vim/undodir
 PROGRAMS=(bash conda csh env git scripts tmux vim)
 
 for program in ${PROGRAMS[@]}; do
-  stow -v --target=$HOME $program
   echo "Configuring $program"
+  stow -v --target=$HOME $program
 done
 
 echo "Done!"
