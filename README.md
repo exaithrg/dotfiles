@@ -3,10 +3,6 @@
 
 **NOTE**: Dotfiles should be in their own folder, under version control, and **symlinked** into place using a script.
 
-## AutoUpdate
-
-Automatically update my dotfiles in this repository
-
 ## XmodMap
 
 `.Xmodmap` is used to remap `<ESC>` with `<CapsLock>`
@@ -383,6 +379,8 @@ w "list window"
 ```
 
 ## RandomQuotes
+
+**NOTE**: If you want to connect to a remote host via sftp or scp, the .bashrc of the remote host should not have any echo statements, otherwise it will fail to connect. So don't use randomquotes in this case.
 
 `cp ./randomquotes.sh ~/.randomquotes`
 
