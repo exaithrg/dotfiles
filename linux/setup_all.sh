@@ -40,4 +40,7 @@ for program in ${PROGRAMS[@]}; do
   stow -v --target=$HOME $program
 done
 
+echo "Configuring ssh"
+stow -v --target=$HOME/.ssh ssh
+
 echo "Done!"
