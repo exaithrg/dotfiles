@@ -27,7 +27,6 @@ backup_if_exists ~/.vimrc
 backup_if_exists ~/.xinputrc
 backup_if_exists ~/.Xmodmap
 backup_if_exists ~/.zshrc
-backup_if_exists ~/.ssh/config
 
 mkdir -p ~/.vim/backupdir
 mkdir -p ~/.vim/swpdir
@@ -39,8 +38,5 @@ for program in ${PROGRAMS[@]}; do
   echo "Configuring $program"
   stow -v --target=$HOME $program
 done
-
-echo "Configuring ssh"
-stow -v --target=$HOME/.ssh ssh
 
 echo "Done!"
