@@ -21,7 +21,7 @@ killmanytmuxsessions() {
 
 alias cl='clsourquotes'
 alias l='ls -CF'
-alias ll='ls -ahF'
+alias ll='ls -AhF'
 alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'

@@ -23,6 +23,7 @@ backup_if_exists ~/.gitconfig
 backup_if_exists ~/.inputrc
 backup_if_exists ~/.profile
 backup_if_exists ~/.randomquotes
+backup_if_exists ~/.tldrrc
 backup_if_exists ~/.tmux.conf
 backup_if_exists ~/.vimrc
 backup_if_exists ~/.xinputrc
@@ -33,7 +34,7 @@ mkdir -p ~/.vim/backupdir
 mkdir -p ~/.vim/swpdir
 mkdir -p ~/.vim/undodir
 
-PROGRAMS=(bash conda csh env git scripts tmux vim zsh)
+PROGRAMS=(bash conda csh env git scripts tldr tmux vim zsh)
 
 for program in ${PROGRAMS[@]}; do
   echo "Configuring $program"
