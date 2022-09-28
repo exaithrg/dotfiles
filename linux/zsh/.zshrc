@@ -153,3 +153,8 @@ export AM_HOME=/home/geng/work/ysyx/ysyx-workbench/abstract-machine
 
 # source ~/.randomquotes
 
+[ -z "$TMUX" ] && [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
+# if [ -f ~/.Xmodmap ]; then
+#     [ -z "$TMUX" ] && xmodmap ~/.Xmodmap
+# fi
+

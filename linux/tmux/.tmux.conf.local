@@ -414,6 +414,11 @@ bind W new-window
 bind Escape copy-mode # enter copy mode (prefix Escape)
 bind ^p pasteb        # paste buffer (prefix Ctrl+p)
 
+# i cannot make Ctrl+\ work as expected within tmux
+# bind -n 'C-\' run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys 'C-\\') || tmux select-pane -l"
+# unbind 'C-\'
+# unbind ^\
+
 # resize pane
 # bind -r M-k resizep -U 5 # upward (prefix Ctrl+k)
 # bind -r M-j resizep -D 5 # downward (prefix Ctrl+j)
@@ -512,7 +517,7 @@ set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 # must check tmux show -g default-command
 # set -g @resurrect-capture-pane-contents 'on'
-set -g @resurrect-strategy-vim 'session'
+# set -g @resurrect-strategy-vim 'session'
 
 #set -g @plugin 'tmux-plugins/tmux-copycat'
 #set -g @plugin 'tmux-plugins/tmux-cpu'
