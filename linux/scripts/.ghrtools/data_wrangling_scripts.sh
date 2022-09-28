@@ -21,3 +21,5 @@ echo $PATH | tr -t : '\n' | xargs -I{} find {} -maxdepth 1 -type f -executable |
 # vim which elf
 vim `which -a which | grep -v shell | head -n 1`
 
+# count the number of valid lines of my dotfiles
+find . -type f | sed -E '/^\.\/refs.*$/d' | xargs cat | sed -E '/^[#"].*$/d' | wc -l
