@@ -89,10 +89,13 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Enable ghrtools, like autopush and autocmt
-if [[ "$(hostname)" == "GHR-WM" ]]; then {
-    PATH=$PATH:/home/geng/githubrepos/dotfiles/linux/scripts/ghrtools
-    export PATH
-}; fi
+# if [[ "$(hostname)" == "GHR-WM" ]]; then {
+#     PATH=$PATH:/home/geng/.ghrtools
+#     export PATH
+# }; fi
+
+PATH=$PATH:/home/geng/.ghrtools
+export PATH
 
 # Test if ~/.aliases exists and source it
 if [ -f ~/.aliases ]; then

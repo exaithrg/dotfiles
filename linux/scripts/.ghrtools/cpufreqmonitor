@@ -1,0 +1,2 @@
+#!/bin/bash
+watch -n 1 "cat /proc/cpuinfo | grep MHz | awk '{print \$1 NR \$3 \$4 \$2}'"

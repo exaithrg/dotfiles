@@ -33,7 +33,7 @@ set bufhidden=hide "hide buffer when it be discarded
 set background=dark
 set number " Show line numbers.
 set relativenumber
-set nowrap " do not wrap lines
+" set nowrap " do not wrap lines
 set laststatus=2
 set backspace=indent,eol,start
 "set cursorline "show a long annoying line. 

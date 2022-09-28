@@ -114,10 +114,13 @@ fi
 
 
 # Enable ghrtools, like autopush and autocmt
-if [[ "$(hostname)" == "GHR-UM" ]]; then {
-    PATH=$PATH:/home/geng/githubrepos/dotfiles/linux/scripts/ghrtools
-    export PATH
-}; fi
+# if [[ "$(hostname)" == "GHR-UM" ]]; then {
+#     PATH=$PATH:/home/geng/.ghrtools
+#     export PATH
+# }; fi
+
+PATH=$PATH:/home/geng/.ghrtools
+export PATH
 
 # Test if ~/.aliases exists and source it
 if [ -f ~/.aliases ]; then
