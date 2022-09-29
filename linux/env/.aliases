@@ -30,6 +30,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias df='df -h'
+alias xo='xdg-open'
 # alias sed='sed -E'
 
 alias v='vim'
