@@ -13,12 +13,6 @@
 
 Add `source ~/.randomquotes` to the end of `~/.bashrc `
 
-## Tools
-
-A tool bootstraps your dotfiles: **[dotbot](https://github.com/anishathalye/dotbot)**
-
-Switch between vim and tmux panes: **[vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)**
-
 ## Thanks
 
 **[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)** [ Highly recommended! ] 
