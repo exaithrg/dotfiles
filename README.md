@@ -19,11 +19,11 @@ Add `source ~/.randomquotes` to the end of `~/.bashrc `
 
 [Your unofficial guide to dotfiles on GitHub](https://dotfiles.github.io/)
 
+[Tons of dotfiles on GitHub](https://github.com/search?o=desc&q=dotfiles&s=stars&type=Repositories)
+
 MIT instructors’ dotfiles ([Anish](https://github.com/anishathalye/dotfiles), [Jon](https://github.com/jonhoo/configs), [Jose](https://github.com/JJGO/dotfiles)) 
 
 [mathiasbynens](https://github.com/mathiasbynens)/**[dotfiles](https://github.com/mathiasbynens/dotfiles)**
-
-[Tons of dotfiles on GitHub](https://github.com/search?o=desc&q=dotfiles&s=stars&type=Repositories)
 
 [XuXiaoDong's tmux configuration](https://github.com/xuxiaodong/tmuxen)
 
