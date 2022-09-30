@@ -7,6 +7,7 @@
 clsourquotes() {
 	clear
 	source ~/.randomquotes;
+	# source ~/.randomquotes | lolcat # dont change
 }
 
 # fail to kill all sessions
