@@ -1,13 +1,15 @@
 # My Dotfiles
 **For linux configuration**
 
-**NOTE**: Dotfiles should be in their own folder, under version control, and **symlinked** into place using a script.
+**NOTE1**: Dotfiles should be in their own folder, under version control, and **symlinked** into place using a script.
 
-**NOTE**: Use `./linux/setup_all.sh` to configure the environment automatically.
+**NOTE2**: Use `./linux/setup_all.sh` to configure the environment automatically.
+
+**NOTE3**: If you are new to **vim** or **tmux**, you can check the **[GHR shortcut cheatsheet](https://github.com/njughr/dotfiles/blob/main/ShortCuts.md)** for some useful stuff.
 
 ## RandomQuotes
 
-**NOTE**: If you want to connect to a remote host via sftp or scp, the .bashrc of the remote host should not have any echo statements, otherwise it will fail to connect. So don't use randomquotes in this case.
+**NOTE4**: If you want to connect to a remote host via sftp or scp, the .bashrc of the remote host should not have any echo statements, otherwise it will fail to connect. So don't use randomquotes in this case.
 
 `cp ./randomquotes.sh ~/.randomquotes`
 
@@ -23,9 +25,15 @@ Add `source ~/.randomquotes` to the end of `~/.bashrc `
 
 MIT instructors’ dotfiles ([Anish](https://github.com/anishathalye/dotfiles), [Jon](https://github.com/jonhoo/configs), [Jose](https://github.com/JJGO/dotfiles)) 
 
-[mathiasbynens](https://github.com/mathiasbynens)/**[dotfiles](https://github.com/mathiasbynens/dotfiles)**
+[Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
+
+[A Quick and Easy Guide to tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
 
 [XuXiaoDong's tmux configuration](https://github.com/xuxiaodong/tmuxen)
+
+[Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
+
+[Oh My tmux](https://github.com/gpakosz/.tmux)
 
 [130 Short Quotes That Will Inspire You (Fast)](https://wisdomquotes.com/short-quotes/)
 
