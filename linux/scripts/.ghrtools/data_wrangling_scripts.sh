@@ -22,7 +22,9 @@ echo $PATH | tr -t : '\n' | xargs -I{} find {} -maxdepth 1 -type f -executable |
 # vim which elf
 vim `which -a which | grep -v shell | head -n 1`
 
-# get your top 10 most used commands
+# get your top 10 most used commands, for bash
 history | awk '{$1="";print substr($0,2)}' | sort | uniq -c | sort -n | tail -n 10
+# for zsh
+history 1 | awk '{$1="";print substr($0,2)}' | sort | uniq -c | sort -n | tail -n 20
 
 

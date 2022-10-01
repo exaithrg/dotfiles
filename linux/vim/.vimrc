@@ -49,7 +49,7 @@ set backupcopy=yes " overwrite as backup??
 set noerrorbells visualbell t_vb= 
 set matchtime=2 " time to jump to corresponding branket
 "set magic
-"set updatetime=100 "default=4000, 4 secs. 
+set updatetime=1000 "default=4000, 4 secs. 
 " set smartindent " smartindent doesn't support verilog
 set autoindent " use autoindent for verilog
 set cmdheight=1

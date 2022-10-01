@@ -336,11 +336,7 @@ tmux_conf_copy_to_os_clipboard=true
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
 
-# increase history size
-#set -g history-limit 10000
-
-# start with mouse mode enabled
-#set -g mouse on
+# ghrcfgstart, for easy location
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -348,14 +344,6 @@ set -g status-keys vi
 set -g mode-keys vi
 # set-window-option -g mode-keys vi 
 # set-window-option -g utf8 on # utf8 invalid??
-
-
-# replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-# unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind v new-window -c #{pane_current_path} #!important
@@ -375,7 +363,7 @@ setw -g mode-keys vi
 set -g visual-activity on
 ### disable mouse
 set -g mouse off
-### set history limit
+# increase history size
 set-option -g history-limit 5000
 set-option -g status-keys vi                         
 
@@ -383,28 +371,45 @@ set-option -g status-keys vi
 
 #-- bindkeys --#
 # prefix key
-set -g prefix ^x
-# set -g prefix C-x
+# set -g prefix ^x
+set -g prefix C-x
+# set-option -g prefix C-x
 # set -g prefix M-x
 # unbind ^b
-unbind ^b
-bind ^x send-prefix
-# bind C-x send-prefix
+unbind C-b
+bind C-x send-prefix
 # bind M-x send-prefix
+# set -gu prefix2
 
 # split window
 # vertical split (prefix -)
 unbind '"'
 bind - splitw -v
+# bind - split-window -v
 # horizontal split (prefix |)
 unbind %
 bind | splitw -h 
+# bind -split-window -h
+
+# reload config file, alreay bind in .tmux.conf
+# bind r source-file ~/.tmux.conf
 
 # select pane
-bind k selectp -U # above (prefix k)
-bind j selectp -D # below (prefix j)
-bind h selectp -L # left (prefix h)
-bind l selectp -R # right (prefix l)
+# bind k selectp -U # above (prefix k)
+# bind j selectp -D # below (prefix j)
+# bind h selectp -L # left (prefix h)
+# bind l selectp -R # right (prefix l)
+# M is for Meta, which is usually your Alt key
+# bind -n M-Left select-pane -L
+# bind -n M-Right select-pane -R
+# bind -n M-Up select-pane -U
+# bind -n M-Down select-pane -D
+
+# resize pane
+# bind -r M-k resizep -U 5 # upward (prefix Ctrl+k)
+# bind -r M-j resizep -D 5 # downward (prefix Ctrl+j)
+# bind -r M-h resizep -L 5 # to the left (prefix Ctrl+h)
+# bind -r M-l resizep -R 5 # to the right (prefix Ctrl+l)
 
 bind L select-window -p # switch window
 bind H select-window -n # switch window
@@ -414,16 +419,22 @@ bind W new-window
 bind Escape copy-mode # enter copy mode (prefix Escape)
 bind ^p pasteb        # paste buffer (prefix Ctrl+p)
 
+# Enable mouse control (clickable windows, panes, resizable panes)
+# personally i dont like these
+# start with mouse mode enabled, if you are on tmxu 2.1 or later
+# set -g mouse on
+# if you are using older tmux
+# set -g mouse-select-window on
+# set -g mouse-select-pane on
+# set -g mouse-resize-pane on
+
 # i cannot make Ctrl+\ work as expected within tmux
 # bind -n 'C-\' run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys 'C-\\') || tmux select-pane -l"
 # unbind 'C-\'
 # unbind ^\
 
-# resize pane
-# bind -r M-k resizep -U 5 # upward (prefix Ctrl+k)
-# bind -r M-j resizep -D 5 # downward (prefix Ctrl+j)
-# bind -r M-h resizep -L 5 # to the left (prefix Ctrl+h)
-# bind -r M-l resizep -R 5 # to the right (prefix Ctrl+l)
+# don't rename windows automatically
+set-option -g allow-rename off
 
 # swap pane
 # swap with the previous pane (prefix Ctrl+u)
@@ -469,6 +480,49 @@ bind ^p pasteb        # paste buffer (prefix Ctrl+p)
 # bind-key -T copy-mode-vi 'C-k' select-pane -U
 # bind-key -T copy-mode-vi 'C-l' select-pane -R
 # bind-key -T copy-mode-vi 'C-\' select-pane -l
+
+######################
+### Ham Vocke Theme ##
+######################
+# seems useless, dont know why
+# # loud or quiet?
+# set -g visual-activity off
+# set -g visual-bell off
+# set -g visual-silence off
+# setw -g monitor-activity off
+# set -g bell-action none
+#
+# #  modes
+# setw -g clock-mode-colour colour5
+# setw -g mode-style 'fg=colour1 bg=colour18 bold'
+#
+# # panes
+# set -g pane-border-style 'fg=colour19 bg=colour0'
+# set -g pane-active-border-style 'bg=colour0 fg=colour9'
+#
+# # statusbar
+# set -g status-position bottom
+# set -g status-justify left
+# set -g status-style 'bg=colour18 fg=colour137 dim'
+# set -g status-left ''
+# set -g status-right '#[fg=colour233,bg=colour19] %d/%m #[fg=colour233,bg=colour8] %H:%M:%S '
+# set -g status-right-length 50
+# set -g status-left-length 20
+#
+# setw -g window-status-current-style 'fg=colour1 bg=colour19 bold'
+# setw -g window-status-current-format ' #I#[fg=colour249]:#[fg=colour255]#W#[fg=colour249]#F '
+#
+# setw -g window-status-style 'fg=colour9 bg=colour18'
+# setw -g window-status-format ' #I#[fg=colour237]:#[fg=colour250]#W#[fg=colour244]#F '
+#
+# setw -g window-status-bell-style 'fg=colour255 bg=colour1 bold'
+#
+# # messages
+# set -g message-style 'fg=colour232 bg=colour16 bold'
+
+##########################
+### Ham Vocke Theme END ##
+##########################
 
 # -- tpm -----------------------------------------------------------------------
 
