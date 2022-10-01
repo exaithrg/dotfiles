@@ -7,7 +7,7 @@ BLUE='\e[1;34m'
 PINK='\e[1;35m'
 RES='\e[0m'
 
-n=$((( RANDOM % 112 ) + 1))
+n=$((( RANDOM % 113 ) + 1))
 
 case $n in
     1) echo -e "${YELLOW}Go!${RES}";;
@@ -121,6 +121,7 @@ case $n in
     109) echo -e "${YELLOW}Quietly endure, silently suffer and patiently wait.${RES}";;
     110) echo -e "${YELLOW}Life’s struggles are necessary for growth.${RES}";;
     111) echo -e "${YELLOW}Our greatest glory is not in never falling, but in rising every time we fall.${RES}";;
+    112) echo -e "${YELLOW}Goodbye, V. And never stop fightin'${RES}";;
     *) echo -e "${YELLOW}Happy Day!${RES}"
 esac
 
