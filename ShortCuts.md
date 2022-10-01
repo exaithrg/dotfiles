@@ -1,4 +1,6 @@
-# GHR SortCuts CheatSheet
+# GHR ShortCuts CheatSheet
+
+**NOTE**: The shortcuts and configs in this sheet may be out of date because I'm very lazy and don't want to sync this sheet with dotfiles' config. So if you want to know my current configuration please RTFSC.
 
 ## Xmodmap
 
