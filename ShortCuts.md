@@ -15,17 +15,16 @@ clsourquotes() {
 	clear
 	source ~/.randomquotes;
 }
-
-# fail to kill all sessions
-# tmls | sed -E 's/^(.*):.*windows.*$/\1/' | xargs tmk
-# can use tmux kill-server!
 killmanytmuxsessions() {
     for sessname in $@; do
         echo "killing $sessname"
         tmux kill-session -t $sessname
     done
 }
-
+gadplusgcm() {
+    git add .
+    git commit -m $1
+}
 alias cl='clsourquotes'
 alias l='ls -CF'
 alias ll='ls -AhF'
@@ -37,6 +36,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias df='df -h'
+alias xo='xdg-open'
 # alias sed='sed -E'
 
 alias v='vim'
@@ -54,6 +54,7 @@ alias gp='git push'
 alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
+alias gac='gadplusgcm'
 
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
@@ -220,8 +221,11 @@ F1 "start help"
 ```css
 ^<hjkl> "switch windows"
 nmap Q <Nop>
+" Vim Ctrl+C
 vnoremap <C-Y> "+y
+" Vim Ctrl+X
 vnoremap <C-D> "+d
+" Vim Ctrl+V
 nnoremap <C-P> "+p
 inoremap <C-P> <ESC>"+p
 nnoremap <C-M> <C-X>
@@ -235,10 +239,12 @@ nnoremap H zh
 nnoremap L zl
 nnoremap ZZ :echoe "Use :wq"<CR>
 nnoremap QQ :q!<CR>
+nnoremap q: :echoe "q: not found"<CR>
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
+nnoremap <C-W> :set wrap!<CR>
 ```
 
 ### Longer Commands
@@ -246,6 +252,8 @@ nnoremap <Down>  :echoe "Use j"<CR>
 ```css
 vim -b filename "can show ^M"
 :%s/^v^m$//g "delete all ^M to fix LF and CRLF bug"
+:%s/regexp/&/gn "Count occurrences of regexp"
+:%s/regexp//gn "Count occurrences of regexp"
 %s/\[.*\](\(.*\))/\1/g "replace named Markdown links with plain URLs"
 i1<ESC>q1yyp<C-a>q98@1 "generate 1 to 100"
 <C-v>24l4jd$p "block select and repaste"
@@ -364,20 +372,14 @@ OTHERS
 ### My Tmux Key Remap
 
 ```css
-alias tm='tmux'
-alias tms='tmux new -s'
-alias tma='tmux attach -t' # = tmux a -t
-alias tmk='tmux kill-session -t'
-alias tmls='tmux ls'
 ^x "prefix"
 - "split vertically"
 | "split horizontally"
-<hjkl> "select pane"
-^<hjkl> "switch windows"
 L "switch window"
 q "window left from SEKIRO"
 e "window right. from SEKIRO"
 W "new window"
 w "list window"
+r "reload .tmux.conf"
 ```
 
