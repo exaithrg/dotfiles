@@ -4,6 +4,7 @@ exit
 
 # Count how many lines are in my dotfiles
 find . -type f | sed -E 's/^\.\/refs.*$//' | sed -E '/^$/d' | xargs cat | wc -l
+find . -type f | sed -E '/^\.\/refs.*$/d' | xargs cat | sed -E '/^[#"].*$/d' | sed -E '/^[ \t]*$/d' | wc -l
 
 # Find and concisely list the port numbers of all vnc users
 ps -ef | grep vnc | grep desktop | sed -E 's/^.*\(([a-z]+)\).*rfbport ([0-9]+) .*$/\1: \2/' | sort | awk 'BEGIN{FS=":";OFS=":"}{a[$1]=a[$1] $2}END{for(v in a)print v,a[v]}' | sort
@@ -21,5 +22,7 @@ echo $PATH | tr -t : '\n' | xargs -I{} find {} -maxdepth 1 -type f -executable |
 # vim which elf
 vim `which -a which | grep -v shell | head -n 1`
 
-# count the number of valid lines of my dotfiles
-find . -type f | sed -E '/^\.\/refs.*$/d' | xargs cat | sed -E '/^[#"].*$/d' | wc -l
+# get your top 10 most used commands
+history | awk '{$1="";print substr($0,2)}' | sort | uniq -c | sort -n | tail -n 10
+
+

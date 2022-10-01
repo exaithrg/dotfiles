@@ -50,7 +50,8 @@ set noerrorbells visualbell t_vb=
 set matchtime=2 " time to jump to corresponding branket
 "set magic
 "set updatetime=100 "default=4000, 4 secs. 
-set smartindent
+" set smartindent " smartindent doesn't support verilog
+set autoindent " use autoindent for verilog
 set cmdheight=1
 set laststatus=2 " show status line, defaulte is 1(hidden)
 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " what shows on status line
@@ -339,6 +340,7 @@ runtime macros/matchit.vim
 " Plug 'vimtaku/hl_matchit.vim'
 " Plug 'konfekt/fastfold'
 
+Plug 'luochen1990/rainbow'
 
 call plug#end()
 
