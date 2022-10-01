@@ -20,6 +20,12 @@ killmanytmuxsessions() {
     done
 }
 
+
+gadplusgcm() {
+    git add .
+    git commit -m $1
+}
+
 alias cl='clsourquotes'
 alias l='ls -CF'
 alias ll='ls -AhF'
@@ -49,6 +55,7 @@ alias gp='git push'
 alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
+alias gac='gadplusgcm'
 
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
