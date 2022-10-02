@@ -25,6 +25,7 @@ gadplusgcm() {
     git add .
     git commit -m $1
 }
+
 alias cl='clsourquotes'
 alias l='ls -CF'
 alias ll='ls -AhF'
@@ -34,8 +35,9 @@ alias sl='sl -e'
 # alias dc='cd'
 alias mv='mv -i'
 alias cp='cp -i'
-alias rm='rm -vI'
-alias rmgit='rm -vrf .git'
+alias rm='echo "rm is disabled. use remove."'
+alias remove='/usr/bin/rm -vI'
+alias removegit='remove -rf .git'
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias xo='xdg-open'

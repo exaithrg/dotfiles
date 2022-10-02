@@ -33,11 +33,17 @@ alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'
 # alias dc='cd'
+
 alias mv='mv -i'
 alias cp='cp -i'
-# Securely delete files
-alias rm='rm -vI'
-alias rmgit='rm -vrf .git'
+# Do not alias rm -vI. Cuz if you used to it, 
+# you will expect rm prompt you by default
+# So do not change the original behavior of rm
+# alias rm='rm -vI'
+alias rm='echo "rm is disabled. use remove."'
+alias remove='/usr/bin/rm -vI'
+alias removegit='remove -rf .git'
+
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias xo='xdg-open'
