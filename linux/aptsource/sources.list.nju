@@ -1,0 +1,10 @@
+deb https://mirror.nju.edu.cn/ubuntu/ jammy main restricted universe multiverse
+# deb-src https://mirror.nju.edu.cn/ubuntu/ jammy main restricted universe multiverse
+# deb-src https://mirror.nju.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+# deb-src https://mirror.nju.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb https://mirror.nju.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+# deb-src https://mirror.nju.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+
+# deb https://mirror.nju.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+# deb-src https://mirror.nju.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu/ jammy-security multiverse main restricted universe
