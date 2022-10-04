@@ -67,6 +67,8 @@ alias gad='git add .'
 alias gcm='git commit -m'
 alias gac='gadplusgcm'
 
+alias njuvpn='/usr/local/bin/easyconnect'
+
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
 # alias matg='cmatrix'
