@@ -26,6 +26,7 @@ gadplusgcm() {
     git commit -m $1
 }
 
+alias sudo='sudo '
 alias cl='clsourquotes'
 alias l='ls -CF'
 alias ll='ls -AhF'
