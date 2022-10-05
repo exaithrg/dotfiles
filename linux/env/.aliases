@@ -66,6 +66,7 @@ alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
 alias gac='gadplusgcm'
+alias gldag='git log --all --graph --decorate'
 
 alias njuvpn='easyconnect &'
 
