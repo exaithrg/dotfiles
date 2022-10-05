@@ -33,6 +33,7 @@ alias ll='ls -AhF'
 alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'
+alias cdb='cd ..'
 # alias dc='cd'
 
 alias mv='mv -i'
