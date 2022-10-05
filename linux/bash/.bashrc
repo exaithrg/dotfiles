@@ -135,9 +135,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export NEMU_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/nemu
-export AM_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/abstract-machine
-
 # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
 # __conda_setup="$('/home/geng/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -162,4 +159,8 @@ export EDITOR=vim
 
 # clear
 # source ~/.randomquotes
+
+export NEMU_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/nemu
+export AM_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/abstract-machine
+export NPC_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/npc
 
