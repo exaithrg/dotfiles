@@ -135,8 +135,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export NEMU_HOME=/home/geng/work/ysyx/ysyx-workbench/nemu
-export AM_HOME=/home/geng/work/ysyx/ysyx-workbench/abstract-machine
+export NEMU_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/nemu
+export AM_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/abstract-machine
 
 # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!

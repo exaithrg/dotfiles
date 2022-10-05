@@ -26,6 +26,27 @@ gadplusgcm() {
     git commit -m $1
 }
 
+
+ysyxpush() {
+    git checkout master
+    git push
+    git checkout pa0
+    git push
+    git checkout tracer-ysyx2204
+    git push
+    git checkout pa0
+}
+
+ysyxpull() {
+    git checkout master
+    git pull
+    git checkout pa0
+    git pull
+    git checkout tracer-ysyx2204
+    git pull
+    git checkout pa0
+}
+
 alias sudo='sudo '
 alias cl='clsourquotes'
 alias l='ls -CF'

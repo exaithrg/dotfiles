@@ -129,8 +129,8 @@ fi
 
 bindkey -v
 
-export NEMU_HOME=/home/geng/work/ysyx/ysyx-workbench/nemu
-export AM_HOME=/home/geng/work/ysyx/ysyx-workbench/abstract-machine
+export NEMU_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/nemu
+export AM_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/abstract-machine
 
 # source ~/.oh-my-zsh/custom/plugins/incr/incr*.zsh
 
