@@ -143,7 +143,7 @@ nnoremap L zl
 
 " carefully use ZZ, ZZ may cause unanticipated exits.
 nnoremap ZZ :echoe "Use :wq"<CR>
-nnoremap QQ :q!<CR>
+nnoremap QQ :qa!<CR>
 
 nnoremap q: :echoe "q: not found"<CR>
 
