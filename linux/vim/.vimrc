@@ -163,6 +163,17 @@ nnoremap <Down>  :echoe "Use j"<CR>
 ":PlugClean
 ":PlugUpdate
 
+""""""""""""""""""""""""""""""
+" ctags support
+""""""""""""""""""""""""""""""
+set tags=tags
+" set tags=~/gem5-master/tags
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+" let Tlist_Auto_Open=0
+let Tlist_Use_Right_Window = 0
+
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

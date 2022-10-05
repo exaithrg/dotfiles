@@ -384,12 +384,15 @@ bind C-x send-prefix
 # split window
 # vertical split (prefix -)
 unbind '"'
-bind - splitw -v
+# bind - splitw -v
 # bind - split-window -v
 # horizontal split (prefix |)
 unbind %
-bind | splitw -h 
+# bind | splitw -h 
 # bind -split-window -h
+bind-key c new-window -c "#{pane_current_path}"
+bind-key | split-window -h -c "#{pane_current_path}"
+bind-key - split-window -c "#{pane_current_path}"
 
 # reload config file, alreay bind in .tmux.conf
 # bind r source-file ~/.tmux.conf
@@ -413,7 +416,7 @@ bind | splitw -h
 
 bind L select-window -p # switch window
 bind H select-window -n # switch window
-bind W new-window
+# bind W new-window
 
 # copy mode
 bind Escape copy-mode # enter copy mode (prefix Escape)
