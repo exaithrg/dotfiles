@@ -129,9 +129,6 @@ fi
 
 bindkey -v
 
-export NEMU_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/nemu
-export AM_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/abstract-machine
-
 # source ~/.oh-my-zsh/custom/plugins/incr/incr*.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -157,4 +154,8 @@ export AM_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/abstract-machine
 # if [ -f ~/.Xmodmap ]; then
 #     [ -z "$TMUX" ] && xmodmap ~/.Xmodmap
 # fi
+
+export NEMU_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/nemu
+export AM_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/abstract-machine
+export NPC_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/npc
 
