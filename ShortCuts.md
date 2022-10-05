@@ -15,17 +15,20 @@ clsourquotes() {
 	clear
 	source ~/.randomquotes;
 }
+
 killmanytmuxsessions() {
     for sessname in $@; do
         echo "killing $sessname"
         tmux kill-session -t $sessname
     done
 }
+
 gadplusgcm() {
     git add .
     git commit -m $1
 }
 
+alias sudo='sudo '
 alias cl='clsourquotes'
 alias l='ls -CF'
 alias ll='ls -AhF'
@@ -35,9 +38,14 @@ alias sl='sl -e'
 # alias dc='cd'
 alias mv='mv -i'
 alias cp='cp -i'
+# Do not alias rm -vI. Cuz if you used to it, 
+# you will expect rm prompt you by default
+# So do not change the original behavior of rm
+# alias rm='rm -vI'
 alias rm='echo "rm is disabled. use remove."'
 alias remove='/usr/bin/rm -vI'
 alias removegit='remove -rf .git'
+
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias xo='xdg-open'
@@ -59,6 +67,8 @@ alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
 alias gac='gadplusgcm'
+
+alias njuvpn='easyconnect &'
 
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
