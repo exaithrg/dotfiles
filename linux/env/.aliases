@@ -26,6 +26,11 @@ gadplusgcm() {
     git commit -m $1
 }
 
+gadplusgcmplusgp() {
+    git add .
+    git commit -m $1
+    git push
+}
 
 ysyxpush() {
     git checkout master
@@ -92,6 +97,7 @@ alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
 alias gac='gadplusgcm'
+alias gacp='gadplusgcmplusgp'
 alias gldag='git log --all --graph --decorate'
 alias ypull='ysyxpull'
 alias ypush='ysyxpush'
