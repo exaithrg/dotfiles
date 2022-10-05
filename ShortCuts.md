@@ -28,6 +28,12 @@ gadplusgcm() {
     git commit -m $1
 }
 
+gadplusgcmplusgp() {
+    git add .
+    git commit -m $1
+    git push
+}
+
 alias sudo='sudo '
 alias cl='clsourquotes'
 alias l='ls -CF'
@@ -35,6 +41,10 @@ alias ll='ls -AhF'
 alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'
+alias cdb='cd ..'
+alias cdbb='cd ../..'
+alias cdbbb='cd ../../..'
+alias cdbbbb='cd ../../../..'
 # alias dc='cd'
 alias mv='mv -i'
 alias cp='cp -i'
@@ -44,8 +54,8 @@ alias cp='cp -i'
 # alias rm='rm -vI'
 alias rm='echo "rm is disabled. use remove."'
 alias remove='/usr/bin/rm -vI'
-alias removegit='sudo remove -r .git'
-
+# use sudo removegit
+alias removegit='remove -r .git'
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias xo='xdg-open'
@@ -67,8 +77,11 @@ alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
 alias gac='gadplusgcm'
+alias gacp='gadplusgcmplusgp'
+alias gldag='git log --all --graph --decorate'
 
 alias njuvpn='easyconnect &'
+alias vrlt='verilator'
 
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
