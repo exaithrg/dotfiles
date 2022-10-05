@@ -43,7 +43,7 @@ alias cp='cp -i'
 # alias rm='rm -vI'
 alias rm='echo "rm is disabled. use remove."'
 alias remove='/usr/bin/rm -vI'
-alias removegit='remove -rf .git'
+alias removegit='sudo remove -r .git'
 
 alias mkdir='mkdir -p'
 alias df='df -h'
