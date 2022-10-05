@@ -97,6 +97,7 @@ alias ypull='ysyxpull'
 alias ypush='ysyxpush'
 
 alias njuvpn='easyconnect &'
+alias vrlt='verilator'
 
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
