@@ -158,4 +158,5 @@ unset __conda_setup
 export NEMU_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/nemu
 export AM_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/abstract-machine
 export NPC_HOME=/home/geng/githubrepos/ysyx/ysyx-workbench/npc
+export NVBOARD_HOME=/home/geng/githubrepos/NJU_ProjectN/nvboard
 
