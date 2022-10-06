@@ -414,8 +414,8 @@ bind-key - split-window -c "#{pane_current_path}"
 # bind -r M-h resizep -L 5 # to the left (prefix Ctrl+h)
 # bind -r M-l resizep -R 5 # to the right (prefix Ctrl+l)
 
-bind L select-window -p # switch window
-bind H select-window -n # switch window
+bind l select-window -p # switch window
+bind h select-window -n # switch window
 # bind W new-window
 
 # copy mode

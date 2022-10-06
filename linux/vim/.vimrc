@@ -65,6 +65,9 @@ setlocal foldlevel=1
 " set fen " fold enable, = set foldenable
 set nofen " do not fold anything, = set nofoldenable
 " autocmd FileType * exe "normal zR"
+" use space to turn on/off fold
+nnoremap <leader>f @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> 
+
 
 " Undo, Swap, and Backup Settings
 " setlocal noswapfile 
@@ -84,9 +87,6 @@ highlight clear SignColumn
 " hi Visual guifg=none guibg=LightBlue gui=none
 " hi Visual cterm=none ctermbg=LightBlue ctermfg=none guibg=DarkGray
 " hi Visual term=reverse cterm=reverse ctermbg=black guibg=grey60
-
-" use space to turn on/off fold
-" nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> 
 
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
@@ -204,7 +204,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <leader>m :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
+" nnoremap <leader>f :NERDTreeFind<CR>
 
 " show git status flags.
 Plug 'xuyuanp/nerdtree-git-plugin'
