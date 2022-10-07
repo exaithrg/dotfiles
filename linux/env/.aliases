@@ -21,6 +21,11 @@ killmanytmuxsessions() {
 }
 
 
+cdpluslscf() {
+    cd $1
+    ls -CF
+}
+
 gadplusgcm() {
     git add .
     git commit -m $1
@@ -59,6 +64,7 @@ alias ll='ls -AhF'
 alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'
+alias cdl='cdpluslscf'
 alias cdb='cd ..'
 alias cdbb='cd ../..'
 alias cdbbb='cd ../../..'
