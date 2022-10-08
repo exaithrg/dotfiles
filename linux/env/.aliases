@@ -99,7 +99,9 @@ alias tmls='tmux ls'
 
 alias gs='git status'
 alias gp='git push'
-alias gpl='git pull'
+alias gl='git pull'
+# unalias gl
+# alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
 alias gac='gadplusgcm'
