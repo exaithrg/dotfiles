@@ -20,6 +20,13 @@ killmanytmuxsessions() {
     done
 }
 
+geditruninbg() {
+    gedit $1 &
+}
+
+typoraruninbg() {
+    typora $1 &
+}
 
 cdpluslscf() {
     cd $1
@@ -88,7 +95,9 @@ alias xo='xdg-open'
 # alias sed='sed -E'
 
 alias v='vim'
+alias typora='typoraruninbg'
 alias ty='typora'
+alias gedit='geditruninbg'
 
 alias tm='tmux'
 alias tms='tmux new -s'
