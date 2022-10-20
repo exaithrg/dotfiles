@@ -5,7 +5,7 @@
 
 **NOTE2**: Use `./linux/setup_all.sh` to configure the environment automatically.
 
-**NOTE3**: If you are new to **vim** or **tmux**, you can check the **[GHR Shortcuts Cheatsheet](https://github.com/njughr/dotfiles/blob/main/ShortCuts.md)** for some useful stuff.
+**NOTE3**: If you are new to **vim** or **tmux**, you can check the **[GHR Shortcuts Cheatsheet](https://github.com/njughr/dotfiles/blob/main/GHRCheatSheet.md)** for some useful stuff.
 
 ## RandomQuotes
 
