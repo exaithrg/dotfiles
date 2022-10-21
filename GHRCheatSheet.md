@@ -23,6 +23,19 @@ killmanytmuxsessions() {
     done
 }
 
+geditruninbg() {
+    gedit $1 &
+}
+
+typoraruninbg() {
+    typora $1 &
+}
+
+cdpluslscf() {
+    cd $1
+    ls -CF
+}
+
 gadplusgcm() {
     git add .
     git commit -m $1
@@ -41,11 +54,15 @@ alias ll='ls -AhF'
 alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'
+alias c='cd'
+# alias dc='cd'
+alias cdl='cdpluslscf'
 alias cdb='cd ..'
 alias cdbb='cd ../..'
 alias cdbbb='cd ../../..'
 alias cdbbbb='cd ../../../..'
-# alias dc='cd'
+alias cdbbbbb='cd ../../../../..'
+
 alias mv='mv -i'
 alias cp='cp -i'
 # Do not alias rm -vI. Cuz if you used to it, 
@@ -54,15 +71,20 @@ alias cp='cp -i'
 # alias rm='rm -vI'
 alias rm='echo "rm is disabled. use remove."'
 alias remove='/usr/bin/rm -vI'
+# alias remove='/usr/bin/rm -vi'
 # use sudo removegit
 alias removegit='remove -r .git'
+
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias xo='xdg-open'
+alias so='source'
 # alias sed='sed -E'
 
 alias v='vim'
+alias typora='typoraruninbg'
 alias ty='typora'
+alias gedit='geditruninbg'
 
 alias tm='tmux'
 alias tms='tmux new -s'
@@ -73,15 +95,20 @@ alias tmls='tmux ls'
 
 alias gs='git status'
 alias gp='git push'
-alias gpl='git pull'
+alias gl='git pull'
+# unalias gl
+# alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
 alias gac='gadplusgcm'
 alias gacp='gadplusgcmplusgp'
+alias glog='git log'
+alias gref='git reflog'
 alias gldag='git log --all --graph --decorate'
 
 alias njuvpn='easyconnect &'
-alias vrlt='verilator'
+alias vr='verilator'
+alias gw='gtkwave'
 
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
