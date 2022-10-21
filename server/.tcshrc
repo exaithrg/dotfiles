@@ -1,0 +1,17 @@
+# Author: Haoran Geng
+
+# export PS1='\e[0;31m[\u@\h \W]\$ \e[m'
+
+set cggreen = "%{\e[32m%}" # Green Begin
+set cgyellow = "%{\e[33m%}" # Green Begin
+set cglblue = "%{\e[36m%}" # LightBlue Begin
+set cgdeft = "%{\e[0m%}"  # Reset
+set prompt="%B$cgyellow\T\C\S\H $cglblue%c $cgdeft>> %b"
+
+# echo "hello tcsh"
+
+source /usr/edatools/setups/synopsys.csh
+
+# not suitable for tcsh
+# source ~/.aliases
+
