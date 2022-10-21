@@ -40,7 +40,7 @@ function MyDiff()
 endfunction
 
 " gui font
-set guifont=Consolas:h16:cANSI:qDRAFT
+set guifont=Consolas:h14:cANSI:qDRAFT
 
 " VIMRC START
 set nocompatible
@@ -62,8 +62,8 @@ set smartcase " Do smart case matching
 set incsearch " Incremental search
 setlocal noswapfile 
 set bufhidden=hide "hide buffer when it be discarded
-"colorscheme default
 set background=dark
+colorscheme molokai " 设定配色方案
 set number " Show line numbers.
 set relativenumber
 set nowrap " do not wrap lines
