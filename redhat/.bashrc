@@ -1,6 +1,5 @@
+# .bashrc for redhat
 # Author: Haoran Geng
-
-# .bashrc
 
 # ubuntu style
 # export PS1='\[\e[1;32m\]\u@\h \[\e[1;36m\]\W\[\e[m\]\$ '
@@ -73,7 +72,8 @@ alias hl55="cd /home/lvjingjing/WORK/PROJ_HLMC55LP"
 # User specific aliases and function
 
 if [ -f ~/.aliases ]; then
-    load ~/.aliases
+    # load ~/.aliases
+    source ~/.aliases
 fi
 
 set -o vi

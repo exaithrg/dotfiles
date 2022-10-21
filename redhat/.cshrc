@@ -1,5 +1,7 @@
+# .cshrc for redhat
 # Author: Haoran Geng
 
-source /usr/edatools/setups/synopsys.csh
+echo "Hello csh"
 
+source /usr/edatools/setups/synopsys.csh
 

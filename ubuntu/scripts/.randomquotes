@@ -1,4 +1,6 @@
 #!/bin/bash
+# .randomquotes for ubuntu
+# Author: Haoran Geng
 
 RED='\e[1;31m'
 GREEN='\e[1;32m'

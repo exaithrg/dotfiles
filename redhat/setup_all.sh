@@ -1,4 +1,5 @@
 #!/bin/bash
+# dotfiles config script for redhat
 # Author: Haoran Geng
 
 # symlink your dotfiles automatically

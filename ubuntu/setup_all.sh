@@ -1,4 +1,6 @@
 #!/bin/bash
+# dotfiles config script for ubuntu
+# Author: Haoran Geng
 
 OLD_DOTFILES="dotfile_bk_$(date -u +"%Y%m%d%H%M%S")"
 mkdir $OLD_DOTFILES

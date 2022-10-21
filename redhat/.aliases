@@ -1,3 +1,4 @@
+# .aliases for redhat
 # Author: Haoran Geng
 
 # User specific aliases and functions
@@ -12,16 +13,9 @@ clsourquotes() {
 	# source ~/.randomquotes | lolcat # dont change
 }
 
-# fail to kill all sessions
-# tmls | sed -E 's/^(.*):.*windows.*$/\1/' | xargs tmk
-# can use tmux kill-server!
-killmanytmuxsessions() {
-    for sessname in $@; do
-        echo "killing $sessname"
-        tmux kill-session -t $sessname
-    done
+geditruninbg() {
+    gedit $1 &
 }
-
 
 cdpluslscf() {
     cd $1
@@ -31,40 +25,6 @@ cdpluslscf() {
 gadplusgcm() {
     git add .
     git commit -m $1
-}
-
-gadplusgcmplusgp() {
-    git add .
-    git commit -m $1
-    git push
-}
-
-irunstarttop(){
-    irun -f caf +access+wrc -top $1 +gui &
-}
-
-geditstartbg(){
-    gedit $1 &
-}
-
-ysyxpush() {
-    git checkout master
-    git push
-    git checkout pa0
-    git push
-    git checkout tracer-ysyx2204
-    git push
-    git checkout pa0
-}
-
-ysyxpull() {
-    git checkout master
-    git pull
-    git checkout pa0
-    git pull
-    git checkout tracer-ysyx2204
-    git pull
-    git checkout pa0
 }
 
 alias sudo='sudo '
@@ -102,37 +62,13 @@ alias so='source'
 # alias sed='sed -E'
 
 alias v='vim'
-alias ty='typora'
-
-alias tm='tmux'
-alias tms='tmux new -s'
-alias tma='tmux attach -t' # = tmux a -t
-alias tmk='killmanytmuxsessions'
-alias tmkall='tmux kill-server'
-alias tmls='tmux ls'
+alias gedit='geditruninbg'
 
 alias gs='git status'
-alias gp='git push'
-alias gl='git pull'
-# unalias gl
-# alias gpl='git pull'
 alias gad='git add .'
 alias gcm='git commit -m'
 alias gac='gadplusgcm'
-alias gacp='gadplusgcmplusgp'
 alias glog='git log'
 alias gref='git reflog'
 alias gldag='git log --all --graph --decorate'
-alias ypull='ysyxpull'
-alias ypush='ysyxpush'
-
-alias njuvpn='easyconnect &'
-alias vr='verilator'
-alias gw='gtkwave'
-alias iruntop='irunstarttop'
-alias gebg='geditstartbg'
-
-# alias scs='gnome-screenshot -a'
-# alias matr='cmatrix -r'
-# alias matg='cmatrix'
 

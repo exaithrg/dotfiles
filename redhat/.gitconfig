@@ -1,3 +1,6 @@
+; .gitconfig for redhat
+; Author: Haoran Geng
+
 [user]
 	name = genghaoran
 	email = 171180586@smail.nju.edu.cn

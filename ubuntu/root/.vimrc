@@ -1,3 +1,6 @@
+" .vimrc for ubuntu root user
+" Author: Haoran Geng
+
 "True Color
 set t_Co=256 
 if has("termguicolors")

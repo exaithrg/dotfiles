@@ -1,3 +1,6 @@
+; .gitconfig for ubuntu
+; Author: Haoran Geng
+
 [user]
 	name = ysyx_22050043-Geng Haoran
 	email = hrgeng@smail.nju.edu.cn
@@ -5,6 +8,7 @@
 	editor = vim
 [color]
 	ui = true
+
 ; portable settings
 ; [include]
 ;     path = ~/.gitconfig_local

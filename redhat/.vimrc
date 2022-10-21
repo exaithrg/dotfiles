@@ -1,3 +1,4 @@
+" .vimrc for redhat
 " Author: Haoran Geng
 
 set nocompatible
@@ -41,14 +42,19 @@ set backupcopy=yes " overwrite as backup??
 set noerrorbells visualbell t_vb= 
 set matchtime=2 " time to jump to corresponding branket
 "set magic
-"set updatetime=100 "default=4000, 4 secs. 
-set smartindent
+set updatetime=1000 "default=4000, 4 secs. 
+" set smartindent " smartindent doesn't support verilog
+set autoindent " use autoindent for verilog
 set cmdheight=1
 set laststatus=2 " show status line, defaulte is 1(hidden)
 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " what shows on status line
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+"set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
 set mouse+=a
 set scrolloff=7
+
 " colorscheme molokai
+colorscheme murphy
 
 " set foldclose=all "disable all fold, seems useless
 set foldmethod=syntax 
@@ -57,6 +63,8 @@ setlocal foldlevel=1
 " set fen " fold enable, = set foldenable
 set nofen " do not fold anything, = set nofoldenable
 " autocmd FileType * exe "normal zR"
+" use space to turn on/off fold
+nnoremap <leader>f @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> 
 
 " Undo, Swap, and Backup Settings
 " setlocal noswapfile 
@@ -77,21 +85,19 @@ highlight clear SignColumn
 " hi Visual cterm=none ctermbg=LightBlue ctermfg=none guibg=DarkGray
 " hi Visual term=reverse cterm=reverse ctermbg=black guibg=grey60
 
-" use space to turn on/off fold
-" nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> 
-
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
 " :version must have '+clipboard'
-" If not, you must install vim-gtk3
+" If not, you need to install vim-gtk3, or
+set clipboard=unnamedplus
 " Vim Ctrl+C
-vnoremap <C-Y> "+y
+vnoremap <C-Y> y
 " Vim Ctrl+X
-vnoremap <C-D> "+d
+vnoremap <C-D> d
 " Vim Ctrl+V
-nnoremap <C-P> "+p
-inoremap <C-P> <ESC>"+p
+nnoremap <C-P> p
+inoremap <C-P> <ESC>p
 
 " :set wrap! is ok, but alt not work.
 nnoremap <C-W> :set wrap!<CR>
@@ -148,5 +154,22 @@ nnoremap <Down>  :echoe "Use j"<CR>
 " inoremap <Right> <ESC>:echoe "Use l"<CR>
 " inoremap <Up>    <ESC>:echoe "Use k"<CR>
 " inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+iabbrev always_ff always_ff @ (posedge clk) begin
+iabbrev always_comb always_comb begin
+
+autocmd BufWritePost $MYVIMRC source $MYVIMRC"
+autocmd BufNewFile *.c,*.cpp,*.py,*.sv,*.v exec ":call SetTitle()"
+func SetTitle()
+    call setline(1, "*************************************************************************")
+    call setline(2, "\ @Description: ")
+    call setline(3, "\ @File Name: ".expand("%"))
+    call setline(4, "\ @Author: Haoran Geng")
+    call setline(5, "\ @Email: ")
+    call setline(6, "\ @Created Time: ".strftime("%c"))
+    call setline(7, "\ @Revision history:")
+    call setline(8, "************************************************************************")
+autocmd BufNewfile * normal G
+endfunc
 
 

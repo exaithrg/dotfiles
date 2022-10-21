@@ -1,3 +1,6 @@
+" .vimrc for ubuntu
+" Author: Haoran Geng
+
 "True Color
 set t_Co=256 
 if has("termguicolors")
@@ -55,6 +58,8 @@ set autoindent " use autoindent for verilog
 set cmdheight=1
 set laststatus=2 " show status line, defaulte is 1(hidden)
 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " what shows on status line
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+"set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
 set mouse+=a
 set scrolloff=7
 
@@ -92,7 +97,8 @@ highlight clear SignColumn
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
 " :version must have '+clipboard'
-" If not, you must install vim-gtk3
+" If not, you need to install vim-gtk3, or
+" set clipboard=unnamedplus
 " Vim Ctrl+C
 vnoremap <C-Y> "+y
 " Vim Ctrl+X
@@ -157,11 +163,28 @@ nnoremap <Down>  :echoe "Use j"<CR>
 " inoremap <Up>    <ESC>:echoe "Use k"<CR>
 " inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
-"vim-plug
-":PlugInstall
-":PlugStatus
-":PlugClean
-":PlugUpdate
+iabbrev always_ff always_ff @ (posedge clk) begin
+iabbrev always_comb always_comb begin
+
+autocmd BufWritePost $MYVIMRC source $MYVIMRC"
+autocmd BufNewFile *.c,*.cpp,*.py,*.sv,*.v exec ":call SetTitle()"
+func SetTitle()
+    call setline(1, "*************************************************************************")
+    call setline(2, "\ @Description: ")
+    call setline(3, "\ @File Name: ".expand("%"))
+    call setline(4, "\ @Author: Haoran Geng")
+    call setline(5, "\ @Email: ")
+    call setline(6, "\ @Created Time: ".strftime("%c"))
+    call setline(7, "\ @Revision history:")
+    call setline(8, "************************************************************************")
+autocmd BufNewfile * normal G
+endfunc
+
+" vim-plug
+" :PlugInstall
+" :PlugStatus
+" :PlugClean
+" :PlugUpdate
 
 """"""""""""""""""""""""""""""
 " ctags support

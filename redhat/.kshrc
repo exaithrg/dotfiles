@@ -1,3 +1,4 @@
+# .kshrc for redhat
 # Author: Haoran Geng
 
 # .kshrc

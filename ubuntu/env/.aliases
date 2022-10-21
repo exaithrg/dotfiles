@@ -1,3 +1,6 @@
+# .aliases for ubuntu
+# Author: Haoran Geng
+
 # User specific aliases and functions
 # To ignore alias, run cmd prepened with \
 # or disable an alias altogether with unalias
@@ -71,12 +74,14 @@ alias ll='ls -AhF'
 alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'
+alias c='cd'
+# alias dc='cd'
 alias cdl='cdpluslscf'
 alias cdb='cd ..'
 alias cdbb='cd ../..'
 alias cdbbb='cd ../../..'
 alias cdbbbb='cd ../../../..'
-# alias dc='cd'
+alias cdbbbbb='cd ../../../../..'
 
 alias mv='mv -i'
 alias cp='cp -i'
@@ -86,12 +91,14 @@ alias cp='cp -i'
 # alias rm='rm -vI'
 alias rm='echo "rm is disabled. use remove."'
 alias remove='/usr/bin/rm -vI'
+# alias remove='/usr/bin/rm -vi'
 # use sudo removegit
 alias removegit='remove -r .git'
 
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias xo='xdg-open'
+alias so='source'
 # alias sed='sed -E'
 
 alias v='vim'
