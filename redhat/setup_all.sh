@@ -1,6 +1,8 @@
 #!/bin/bash
 # dotfiles config script for redhat
 # Author: Haoran Geng
+# NOTE: If you want to modify this file, edit
+#       it carefully. It may delete your home.
 
 # symlink your dotfiles automatically
 echo "Backup your dotfiles..."

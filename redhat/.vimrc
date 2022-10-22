@@ -7,6 +7,11 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 
+" fix nerdtree icon bugs
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+
 syntax on
 " or syntax enable
 
@@ -53,8 +58,11 @@ set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\
 set mouse+=a
 set scrolloff=7
 
-" colorscheme molokai
-colorscheme murphy
+set background=dark
+" molokai cannot be loaded
+" colorscheme desert
+" let g:molokai_original = 1
+" colorscheme murphy
 
 " set foldclose=all "disable all fold, seems useless
 set foldmethod=syntax 
@@ -101,6 +109,11 @@ inoremap <C-P> <ESC>p
 
 " :set wrap! is ok, but alt not work.
 nnoremap <C-W> :set wrap!<CR>
+
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
 
 " M means minus.
 " C-X used as tmux prefix.
@@ -172,4 +185,29 @@ func SetTitle()
     call setline(9, "")
 endfunc
 autocmd BufNewfile * normal G
+
+" let g:NERDTreeDirArrows      = 1
+" let g:NERDTreeDirExpandable  = 1
+" let g:NERDTreeDirCollapsible = 1
+" let g:NERDTreeGlyphReadOnly  = "RO"
+
+" autocmd VimEnter * NERDTree
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+" Start NERDTree and put the cursor back in the other window.
+" autocmd VimEnter * NERDTree | wincmd p
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" :NERDTree to open
+" ? to turn on the quick help
+" map <F3> :NERDTreeMirror<CR>
+" map <F3> :NERDTreeToggle<CR>
+" nnoremap <leader>n :NERDTreeFocus<CR>
+" nnoremap <leader>m :NERDTree<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
+" nnoremap <leader>f :NERDTreeFind<CR>
 
