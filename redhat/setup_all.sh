@@ -53,8 +53,10 @@ echo "Symlinking dotfiles from $dotfiles"
 link() {
   from="$1"
   to="$2"
+  fname="$3"
   echo "Linking '$from' to '$to'"
-  # rm -f "$to"
+  # echo "$to/$fname"
+  rm -f "$to/$fname"
   ln -sv "$from" "$to"
 }
 
@@ -62,7 +64,7 @@ link() {
 # sed may have some bugs, plz report any bug to Haoran Geng.
 for dotfs in $(find . -maxdepth 1 -type f -regex "\./\..+" | sed -E 's/^\.\/(\.[a-zA-Z_\.]+)$/\1/'); do
   # link "$dotfs" "$HOME/$dotfs"
-  link "$dotdir/$dotfs" ~
+  link "$dotdir/$dotfs" ~ "$dotfs"
 done
 
 echo "All done! Thanks for using."
