@@ -7,7 +7,7 @@
 # To get alias def, just use alias name
 # alias name='' or name="" both ok
 
-clsourquotes() {
+function clsourquotes() {
 	clear
 	source ~/.randomquotes;
 	# source ~/.randomquotes | lolcat # dont change
@@ -16,38 +16,38 @@ clsourquotes() {
 # fail to kill all sessions
 # tmls | sed -E 's/^(.*):.*windows.*$/\1/' | xargs tmk
 # can use tmux kill-server!
-killmanytmuxsessions() {
+function killmanytmuxsessions() {
     for sessname in $@; do
         echo "killing $sessname"
         tmux kill-session -t $sessname
     done
 }
 
-geditruninbg() {
+function geditruninbg() {
     gedit $1 &
 }
 
-typoraruninbg() {
+function typoraruninbg() {
     typora $1 &
 }
 
-cdpluslscf() {
+function cdpluslscf() {
     cd $1
     ls -CF
 }
 
-gadplusgcm() {
+function gadplusgcm() {
     git add .
     git commit -m $1
 }
 
-gadplusgcmplusgp() {
+function gadplusgcmplusgp() {
     git add .
     git commit -m $1
     git push
 }
 
-ysyxpush() {
+function ysyxpush() {
     git checkout master
     git push
     git checkout pa0
@@ -57,7 +57,7 @@ ysyxpush() {
     git checkout pa0
 }
 
-ysyxpull() {
+function ysyxpull() {
     git checkout master
     git pull
     git checkout pa0
