@@ -27,4 +27,6 @@ history | awk '{$1="";print substr($0,2)}' | sort | uniq -c | sort -n | tail -n 
 # for zsh
 history 1 | awk '{$1="";print substr($0,2)}' | sort | uniq -c | sort -n | tail -n 20
 
+# search pattern within all files in current dir
+grep "regexp" . -nr
 
