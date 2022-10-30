@@ -7,64 +7,17 @@
 # To get alias def, just use alias name
 # alias name='' or name="" both ok
 
+########## SHELL ##########
+
 function clsourquotes() {
 	clear
 	source ~/.randomquotes;
 	# source ~/.randomquotes | lolcat # dont change
 }
 
-# fail to kill all sessions
-# tmls | sed -E 's/^(.*):.*windows.*$/\1/' | xargs tmk
-# can use tmux kill-server!
-function killmanytmuxsessions() {
-    for sessname in $@; do
-        echo "killing $sessname"
-        tmux kill-session -t $sessname
-    done
-}
-
-function geditruninbg() {
-    gedit $1 &
-}
-
-function typoraruninbg() {
-    typora $1 &
-}
-
 function cdpluslscf() {
     cd $1
     ls -CF
-}
-
-function gadplusgcm() {
-    git add .
-    git commit -m $1
-}
-
-function gadplusgcmplusgp() {
-    git add .
-    git commit -m $1
-    git push
-}
-
-function ysyxpush() {
-    git checkout master
-    git push
-    git checkout pa0
-    git push
-    git checkout tracer-ysyx2204
-    git push
-    git checkout pa0
-}
-
-function ysyxpull() {
-    git checkout master
-    git pull
-    git checkout pa0
-    git pull
-    git checkout tracer-ysyx2204
-    git pull
-    git checkout pa0
 }
 
 alias sudo='sudo '
@@ -101,10 +54,17 @@ alias xo='xdg-open'
 alias so='source'
 # alias sed='sed -E'
 
-alias v='vim'
-alias typora='typoraruninbg'
-alias ty='typora'
-alias gedit='geditruninbg'
+########## tmux ##########
+
+# fail to kill all sessions
+# tmls | sed -E 's/^(.*):.*windows.*$/\1/' | xargs tmk
+# can use tmux kill-server!
+function killmanytmuxsessions() {
+    for sessname in $@; do
+        echo "killing $sessname"
+        tmux kill-session -t $sessname
+    done
+}
 
 alias tm='tmux'
 alias tms='tmux new -s'
@@ -112,6 +72,39 @@ alias tma='tmux attach -t' # = tmux a -t
 alias tmk='killmanytmuxsessions'
 alias tmkall='tmux kill-server'
 alias tmls='tmux ls'
+
+########## git ##########
+
+function gadplusgcm() {
+    git add .
+    git commit -m $1
+}
+
+function gadplusgcmplusgp() {
+    git add .
+    git commit -m $1
+    git push
+}
+
+function ysyxpush() {
+    git checkout master
+    git push
+    git checkout pa0
+    git push
+    git checkout tracer-ysyx2204
+    git push
+    git checkout pa0
+}
+
+function ysyxpull() {
+    git checkout master
+    git pull
+    git checkout pa0
+    git pull
+    git checkout tracer-ysyx2204
+    git pull
+    git checkout pa0
+}
 
 alias gs='git status'
 alias gp='git push'
@@ -128,7 +121,26 @@ alias gldag='git log --all --graph --decorate'
 alias ypull='ysyxpull'
 alias ypush='ysyxpush'
 
-# applications
+########## applications ##########
+
+function geditruninbg() {
+    gedit $1 &
+}
+
+function typoraruninbg() {
+    typora $1 &
+}
+
+function zathuraruninbg() {
+    zathura $1 &
+}
+
+alias v='vim'
+alias typora='typoraruninbg'
+alias ty='typora'
+alias za='zathura'
+alias gedit='geditruninbg'
+alias ge='gedit'
 alias vr='verilator'
 alias gw='gtkwave'
 alias njuvpn='easyconnect &'

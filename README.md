@@ -49,6 +49,8 @@ MIT instructors’ dotfiles ([Anish](https://github.com/anishathalye/dotfiles), 
 
 [XuXiaoDong's tmux configuration](https://github.com/xuxiaodong/tmuxen)
 
+[lervag's zathura configuration](https://github.com/lervag/dotfiles/tree/master/zathura/.config/zathura)
+
 [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
 
 [Oh My tmux](https://github.com/gpakosz/.tmux)

@@ -31,12 +31,13 @@ backup_if_exists ~/.vimrc
 backup_if_exists ~/.xinputrc
 backup_if_exists ~/.Xmodmap
 backup_if_exists ~/.zshrc
+backup_if_exists ~/.config/zathura/zathurarc
 
 mkdir -p ~/.vim/backupdir
 mkdir -p ~/.vim/swpdir
 mkdir -p ~/.vim/undodir
 
-PROGRAMS=(bash conda csh env git scripts tldr tmux vim zsh)
+PROGRAMS=(bash conda csh env git scripts tldr tmux vim zathura zsh)
 
 for program in ${PROGRAMS[@]}; do
   echo "Configuring $program"

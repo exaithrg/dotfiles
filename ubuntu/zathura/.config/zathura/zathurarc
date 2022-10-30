@@ -1,0 +1,20 @@
+# config files for zathurarc
+# Author: Haoran Geng
+
+set recolor-lightcolor "#ECEDB0"
+set recolor-darkcolor black
+set adjust-open "width"
+# set font "Noto Sans CJK SC Regular 10"
+set guioptions ""
+set window-title-basename true
+set incremental-search true
+# error.
+# set show-v-scrollbar true
+set selection-clipboard clipboard
+# set window-height 760
+# set window-width 1300
+
+# map bl feedkeys ":blist<Tab>"
+# map bm feedkeys ":bmark "
+# map bd feedkeys ":bdelete "
+
