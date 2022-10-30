@@ -128,10 +128,12 @@ alias gldag='git log --all --graph --decorate'
 alias ypull='ysyxpull'
 alias ypush='ysyxpush'
 
-alias njuvpn='easyconnect &'
+# applications
 alias vr='verilator'
 alias gw='gtkwave'
-
+alias njuvpn='easyconnect &'
+# my minecraft accountname: exaithrg
+alias mc='minecraft-launcher &'
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
 # alias matg='cmatrix'
