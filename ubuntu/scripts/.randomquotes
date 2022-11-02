@@ -9,7 +9,7 @@ BLUE='\e[1;34m'
 PINK='\e[1;35m'
 RES='\e[0m'
 
-n=$((( RANDOM % 125 ) + 1))
+n=$((( RANDOM % 124 ) + 1))
 
 case $n in
     1) echo -e "${YELLOW}Go!${RES}";;
@@ -123,20 +123,18 @@ case $n in
     109) echo -e "${YELLOW}Quietly endure, silently suffer and patiently wait.${RES}";;
     110) echo -e "${YELLOW}Life’s struggles are necessary for growth.${RES}";;
     111) echo -e "${YELLOW}Our greatest glory is not in never falling, but in rising every time we fall.${RES}";;
-    112) echo -e "${YELLOW}${RES}";;
-    113) echo -e "${YELLOW}True optimism is born out of adversity, setbacks and blows.${RES}";;
+    112) echo -e "${YELLOW}True optimism is born out of adversities, setbacks and blows.${RES}";;
     113) echo -e "${YELLOW}Even if there is only a glimmer of hope, never give up.${RES}";;
     114) echo -e "${YELLOW}You may see me struggle, but you will never see me quit.${RES}";;
     115) echo -e "${YELLOW}There is no failure except in no longer trying.${RES}";;
-    116) echo -e "${YELLOW}It always seems impossible until it’s done.${RES}";;
-    117) echo -e "${YELLOW}Winners never quit, and quitters never win.${RES}";;
-    118) echo -e "${YELLOW}Do not fear failure but rather fear not trying.${RES}";;
-    119) echo -e "${YELLOW}Failure is only the opportunity to begin again, this time more intelligently.${RES}";;
-    120) echo -e "${YELLOW}You should never give up your inner self.${RES}";;
-    121) echo -e "${YELLOW}What doesn't kill you always makes you stronger.${RES}";;
-    122) echo -e "${YELLOW}Always remember who you are.${RES}";;
-    123) echo -e "${YELLOW}Person with big dreams is more powerful.${RES}";;
-    124) echo -e "${YELLOW}Goodbye, V. And never stop fightin'${RES}";;
+    115) echo -e "${YELLOW}Winners never quit, and quitters never win.${RES}";;
+    117) echo -e "${YELLOW}Do not fear failure but rather fear not trying.${RES}";;
+    118) echo -e "${YELLOW}Failure is only the opportunity to begin again, this time more intelligently.${RES}";;
+    119) echo -e "${YELLOW}You should never give up your inner self.${RES}";;
+    120) echo -e "${YELLOW}What doesn't kill you always makes you stronger.${RES}";;
+    121) echo -e "${YELLOW}Always remember who you are.${RES}";;
+    122) echo -e "${YELLOW}Person with big dreams is more powerful.${RES}";;
+    123) echo -e "${YELLOW}Goodbye, V. And never stop fightin'${RES}";;
     *) echo -e "${YELLOW}Happy Every Day!${RES}"
 esac
 
