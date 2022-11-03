@@ -36,3 +36,8 @@ ls -lR | grep "^-" | wc -l
 # gpu use
 watch -n 1 -d nvidia-smi
 
+# ls gpus in your pc
+lspci -k | grep -A 2 -E "(VGA|3D)"
+
+# ls linux version and system name
+cat /proc/version
