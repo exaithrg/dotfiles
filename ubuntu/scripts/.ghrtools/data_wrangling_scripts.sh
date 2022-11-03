@@ -33,3 +33,6 @@ grep "regexp" . -nr
 # count how many files in current dir
 ls -lR | grep "^-" | wc -l
 
+# gpu use
+watch -n 1 -d nvidia-smi
+
