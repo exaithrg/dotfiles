@@ -108,7 +108,7 @@ nnoremap <C-P> p
 inoremap <C-P> <ESC>p
 
 " :set wrap! is ok, but alt not work.
-nnoremap <C-W> :set wrap!<CR>
+nnoremap <C-L> :set wrap!<CR>
 
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j

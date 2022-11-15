@@ -28,19 +28,19 @@ gadplusgcm() {
 }
 
 alias sudo='sudo '
-alias cl='clsourquotes'
+alias clr='clsourquotes'
 alias l='ls -CF'
 alias ll='ls -AhF'
 alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'
 alias c='cd'
-alias cdl='cdpluslscf'
-alias cdb='cd ..'
-alias cdbb='cd ../..'
-alias cdbbb='cd ../../..'
-alias cdbbbb='cd ../../../..'
-alias cdbbbbb='cd ../../../../..'
+alias cl='cdpluslscf'
+alias cb='cd ..'
+alias cbb='cd ../..'
+alias cbbb='cd ../../..'
+alias cbbbb='cd ../../../..'
+alias cbbbbb='cd ../../../../..'
 # alias dc='cd'
 
 alias mv='mv -i'
@@ -62,7 +62,7 @@ alias so='source'
 # alias sed='sed -E'
 
 alias v='vim'
-alias gedit='geditruninbg'
+alias ge='geditruninbg'
 
 alias gs='git status'
 alias gad='git add .'
@@ -71,4 +71,7 @@ alias gac='gadplusgcm'
 alias glog='git log'
 alias gref='git reflog'
 alias gldag='git log --all --graph --decorate'
+
+alias 28nm='cd /pdk/mooreelite/TSMC28HPC+/TSMC_iPDK_20170531/STD_CELL/tcbn28hpcplusbwp12t30p140_190a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp12t30p140_180a'
+
 
