@@ -154,4 +154,5 @@ alias mc='prime-run minecraft-launcher'
 # alias scs='gnome-screenshot -a'
 # alias matr='cmatrix -r'
 # alias matg='cmatrix'
+alias gputop='watch -n 1 -d nvidia-smi'
 
