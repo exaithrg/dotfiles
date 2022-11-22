@@ -1,0 +1,41 @@
+# aliases for redhat tcsh
+# Author: Haoran Geng
+# Link: https://github.com/exaithrg/dotfiles
+
+alias sudo 'sudo '
+alias l 'ls -CF'
+alias ll 'ls -AhF'
+alias lll 'll -l'
+alias la 'ls -A'
+alias sl 'sl -e'
+alias c 'cd'
+alias cb 'cd ..'
+alias cbb 'cd ../..'
+alias cbbb 'cd ../../..'
+alias cbbbb='cd ../../../..'
+alias cbbbbb='cd ../../../../..'
+alias cbbbbbb='cd ../../../../../..'
+alias cbbbbbbb='cd ../../../../../../..'
+# alias dc 'cd'
+
+alias mv 'mv -i'
+alias cp 'cp -i'
+# Do not alias rm -vI. Cuz if you used to it, 
+# you will expect rm prompt you by default
+# So do not change the original behavior of rm
+# alias rm='rm -vI'
+alias rm 'echo "rm is disabled. use remove"'
+alias remove '/bin/rm -vI'
+# alias remove='/bin/rm -vi'
+# use sudo removegit
+alias removegit 'remove -r .git'
+
+alias mkdir 'mkdir -p'
+alias df 'df -h'
+alias xo 'xdg-open'
+alias so 'source'
+# alias sed 'sed -E'
+
+alias v 'vim'
+alias ty 'typora'
+

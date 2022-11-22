@@ -1,5 +1,6 @@
 # .kshrc for redhat
 # Author: Haoran Geng
+# Link: https://github.com/exaithrg/dotfiles
 
 # .kshrc
 

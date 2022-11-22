@@ -1,5 +1,6 @@
 # .bashrc for redhat
 # Author: Haoran Geng
+# Link: https://github.com/exaithrg/dotfiles
 
 # ubuntu style
 # export PS1='\[\e[1;32m\]\u@\h \[\e[1;36m\]\W\[\e[m\]\$ '
@@ -25,13 +26,15 @@ if (! $prompt); then
 fi
 
 source /usr/edatools/setups/synopsys
+# bash cannot source xx.csh
+# source /usr/edatools/setups/innovus_setup.csh
 source ~/.irun_env_setup
 
-# export LANG=C
+export LANG=C
 
-# export CADHOME=/home/edatools
-# export LIC_DIR=$CADHOME/license
-# export CONF_DIR=$CADHOME/setups
+export CADHOME=/usr/edatools
+export LIC_DIR=$CADHOME/license
+export CONF_DIR=$CADHOME/setups
 
 # export CDS_LOAD_ENV=CWD
 # export CDS=$CADHOME/INCISIVE152
@@ -46,16 +49,19 @@ source ~/.irun_env_setup
 
 #load $CONF_DIR/ic616
 #load $CONF_DIR/ic617
-#load $CONF_DIR/ic617_ISR22
-#load $CONF_DIR/incisive152
-#load $CONF_DIR/mmsim2015
-#load $CONF_DIR/cal201404.bash
+load $CONF_DIR/ic617_ISR22
+load $CONF_DIR/incisive152
+# load $CONF_DIR/innovus152
+load $CONF_DIR/mmsim2015
+load $CONF_DIR/cal201404.bash
 #load $CONF_DIR/cal2015
-#load $CONF_DIR/cal201903
-#load $CONF_DIR/peakview
-#load $CONF_DIR/emx.bash
-#load $CONF_DIR/synopsys
-#load $CONF_DIR/ext1910.bash
+# load $CONF_DIR/cal201903
+load $CONF_DIR/stratus152
+load $CONF_DIR/ansys181
+# load $CONF_DIR/synopsys
+load $CONF_DIR/peakview
+load $CONF_DIR/emx.bash
+# load $CONF_DIR/ext1910.bash
 
 alias ic61="virtuoso&"
 alias ..="cd .."
@@ -68,6 +74,8 @@ alias 018="cd /home/lvjingjing/WORK/PROJ_CSMC018_BCD"
 alias 025="cd /home/lvjingjing/WORK/PROJ_CSMC025_BCD"
 alias 40="cd /home/lvjingjing/WORK/PROJ_TSMC40LP_1P8M"
 alias hl55="cd /home/lvjingjing/WORK/PROJ_HLMC55LP"
+alias qrc1="calibre -query ./RUN_DIR/LVS_DIR/svdb < ./RUN_DIR/LVS_DIR/qrc_ywh/query_cmd"
+alias qrc2="qrc -cmd ./RUN_DIR/LVS_DIR/qrc_ywh/qrc_cmd2.ccl"
 
 # User specific aliases and function
 

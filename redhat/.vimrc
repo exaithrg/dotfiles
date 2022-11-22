@@ -1,5 +1,6 @@
 " .vimrc for redhat
 " Author: Haoran Geng
+" Link: https://github.com/exaithrg/dotfiles
 
 set nocompatible
 filetype on
@@ -154,7 +155,7 @@ nnoremap L zl
 
 " carefully use ZZ, ZZ may cause unanticipated exits.
 nnoremap ZZ :echoe "Use :wq"<CR>
-nnoremap QQ :q!<CR>
+nnoremap QQ :qa!<CR>
 
 nnoremap q: :echoe "q: not found"<CR>
 
@@ -210,4 +211,3 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " nnoremap <leader>m :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 " nnoremap <leader>f :NERDTreeFind<CR>
-

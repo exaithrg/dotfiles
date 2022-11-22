@@ -1,5 +1,6 @@
-# .aliases for redhat
+# aliases for redhat bash
 # Author: Haoran Geng
+# Link: https://github.com/exaithrg/dotfiles
 
 # User specific aliases and functions
 # To ignore alias, run cmd prepened with \
@@ -57,6 +58,7 @@ alias removegit='remove -r .git'
 
 alias mkdir='mkdir -p'
 alias df='df -h'
+alias dush='du -sh *'
 alias xo='xdg-open'
 alias so='source'
 # alias sed='sed -E'
@@ -72,6 +74,7 @@ alias glog='git log'
 alias gref='git reflog'
 alias gldag='git log --all --graph --decorate'
 
-alias 28nm='cd /pdk/mooreelite/TSMC28HPC+/TSMC_iPDK_20170531/STD_CELL/tcbn28hpcplusbwp12t30p140_190a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp12t30p140_180a'
-
+alias tsmc28nm='cd /pdk/mooreelite/TSMC28HPC+/TSMC_iPDK_20170531/STD_CELL/tcbn28hpcplusbwp12t30p140_190a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp12t30p140_180a'
+alias hlmc55nm='cd /home/share/file_pdk/HLMC55LP/hp_lvt'
+alias csmc018um='cd /home/share/file_pdk/CSMC_0.18um_1.8V_5V/CSMC_0.18um_1.8V_5V/CSMC0181P6M9TlibG2_BE_V20C02/synopsys'
 

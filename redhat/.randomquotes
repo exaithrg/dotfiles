@@ -1,6 +1,7 @@
 #!/bin/bash
 # .randomquotes for redhat
 # Author: Haoran Geng
+# Link: https://github.com/exaithrg/dotfiles
 
 RED='\e[1;31m'
 GREEN='\e[1;32m'

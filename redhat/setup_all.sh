@@ -1,6 +1,7 @@
 #!/bin/bash
 # dotfiles config script for redhat
 # Author: Haoran Geng
+# Link: https://github.com/exaithrg/dotfiles
 # NOTE: If you want to modify this file, edit
 #       it carefully. It may delete your home.
 
@@ -23,6 +24,7 @@ function backup_if_exists() {
 
 # Clean common conflicts
 backup_if_exists ~/.aliases
+backup_if_exists ~/.aliases_tcsh
 backup_if_exists ~/.bashrc
 backup_if_exists ~/.condarc
 backup_if_exists ~/.cshrc
