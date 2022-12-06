@@ -60,6 +60,7 @@ link() {
 #   link "$dotdir/$dotfs" ~ "$dotfs"
 # done
 
+link "$dotdir/.aliases" ~ ".aliases"
 link "$dotdir/.bashrc" ~ ".bashrc"
 link "$dotdir/.gitconfig" ~ ".gitconfig"
 link "$dotdir/.inputrc" ~ ".inputrc"
