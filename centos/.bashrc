@@ -198,3 +198,8 @@ fi
 
 set -o vi
 export EDITOR=vim
+
+# remap <ESC> and <CapsLock>
+if [ -f ~/.Xmodmap ]; then
+    xmodmap ~/.Xmodmap
+fi

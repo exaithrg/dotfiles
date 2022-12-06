@@ -1,5 +1,7 @@
+; .gitconfig for redhat
+; Author: Haoran Geng
+; Link: https://github.com/exaithrg/dotfiles
+
 [user]
-	email = 2972880695@qq.com
-	name = Core_kingdom
-[push]
-	default = simple
+	name = genghaoran
+	email = 171180586@smail.nju.edu.cn

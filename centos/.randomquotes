@@ -1,0 +1,130 @@
+#!/bin/bash
+# .randomquotes for redhat
+# Author: Haoran Geng
+# Link: https://github.com/exaithrg/dotfiles
+
+RED='\e[1;31m'
+GREEN='\e[1;32m'
+YELLOW='\e[1;33m'
+BLUE='\e[1;34m'
+PINK='\e[1;35m'
+RES='\e[0m'
+
+n=$((( RANDOM % 113 ) + 1))
+
+case $n in
+    1) echo -e "${YELLOW}Go!${RES}";;
+    2) echo -e "${YELLOW}Don't tell people your plans. Show them your results.${RES}";;
+    3) echo -e "${YELLOW}No pressure, no diamonds.${RES}";;
+    4) echo -e "${YELLOW}We can do anything we want to if we stick to it long enough.${RES}";;
+    5) echo -e "${YELLOW}Stay foolish to stay sane.${RES}";;
+    6) echo -e "${YELLOW}When nothing goes right, go left.${RES}";;
+    7) echo -e "${YELLOW}Try Again. Fail again. Fail better.${RES}";;
+    8) echo -e "${YELLOW}Impossible is for the unwilling.${RES}";;
+    9) echo -e "${YELLOW}Once you choose hope, anything's possible. ${RES}";;
+    10) echo -e "${YELLOW}I can and I will.${RES}";;
+    11) echo -e "${YELLOW}Take the risk or lose the chance.${RES}";;
+    12) echo -e "${YELLOW}Good things happen to those who hustle.${RES}";;
+    13) echo -e "${YELLOW}Solitary trees, if they grow at all, grow strong.${RES}";;
+    14) echo -e "${YELLOW}Go forth on your path, as it exists only through your walking.${RES}";;
+    15) echo -e "${YELLOW}He who is brave is free.${RES}";;
+    16) echo -e "${YELLOW}Prove them wrong.${RES}";;
+    17) echo -e "${YELLOW}The question is not what you look at, but what you see.${RES}";;
+    18) echo -e "${YELLOW}Screw it, let's do it.${RES}";;
+    19) echo -e "${YELLOW}Boldness be my friend.${RES}";;
+    20) echo -e "${YELLOW}Keep going. Be all in.${RES}";;
+    21) echo -e "${YELLOW}If you want it, work for it.${RES}";;
+    22) echo -e "${YELLOW}You can if you think you can.${RES}";;
+    23) echo -e "${YELLOW}Whatever you are, be a good one.${RES}";;
+    24) echo -e "${YELLOW}Grow through what you go through.${RES}";;
+    25) echo -e "${YELLOW}Do it with passion or not at all.${RES}";;
+    26) echo -e "${YELLOW}If it matters to you, you'll find a way.${RES}";;
+    27) echo -e "${YELLOW}The past does not equal the future.${RES}";;
+    28) echo -e "${YELLOW}Dream without fear. Love without limits.${RES}";;
+    29) echo -e "${YELLOW}It is not the mountain we conquer but ourselves.${RES}";;
+    30) echo -e "${YELLOW}Whatever you do, do with all your might.${RES}";;
+    31) echo -e "${YELLOW}Every noble work is at first impossible.${RES}";;
+    32) echo -e "${YELLOW}If you’re going through hell, keep going.${RES}";;
+    33) echo -e "${YELLOW}Be faithful to that which exists within yourself.${RES}";;
+    34) echo -e "${YELLOW}Persistence guarantees that results are inevitable.${RES}";;
+    35) echo -e "${YELLOW}When one door of happiness closes, another opens.${RES}";;
+    36) echo -e "${YELLOW}Mastering others is strength. Mastering yourself is true power.${RES}";;
+    37) echo -e "${YELLOW}The true success is the person who invented himself.${RES}";;
+    38) echo -e "${YELLOW}Fall seven times, stand up eight.${RES}";;
+    39) echo -e "${YELLOW}You can totally do this!${RES}";;
+    40) echo -e "${YELLOW}Never stop dreaming.${RES}";;
+    41) echo -e "${YELLOW}Now is all you have.${RES}";;
+    42) echo -e "${YELLOW}Pain is temporary. Quitting lasts forever.${RES}";;
+    43) echo -e "${YELLOW}Stars can’t shine without darkness.${RES}";;
+    44) echo -e "${YELLOW}Be who you needed when you were young.${RES}";;
+    45) echo -e "${YELLOW}Don’t let yesterday take up too much of today.${RES}";;
+    46) echo -e "${YELLOW}The truth isn’t always beauty, but the hunger for it is. ${RES}";;
+    47) echo -e "${YELLOW}Stay close to anything that makes you glad you are alive.${RES}";;
+    48) echo -e "${YELLOW}Happiness is not by chance, but by choice.${RES}";;
+    49) echo -e "${YELLOW}It is never too late to be what you might have been.${RES}";;
+    50) echo -e "${YELLOW}No matter what you’re going through, there’s a light at the end of the tunnel.${RES}";;
+    51) echo -e "${YELLOW}It isn’t where you came from. It’s where you’re going that counts.${RES}";;
+    52) echo -e "${YELLOW}Yesterday is done. Tomorrow never comes. Today is here.${RES}";;
+    53) echo -e "${YELLOW}When you have a dream, you’ve got to grab it and never let go.${RES}";;
+    54) echo -e "${YELLOW}You must do the things you think you cannot do.${RES}";;
+    55) echo -e "${YELLOW}To be the best, you must be able to handle the worst.${RES}";;
+    56) echo -e "${YELLOW}Life isn’t about finding yourself. Life is about creating yourself.${RES}";;
+    57) echo -e "${YELLOW}Always do what you are afraid to do.${RES}";;
+    58) echo -e "${YELLOW}If you can dream it, you can do it.${RES}";;
+    59) echo -e "${YELLOW}Defeat may serve as well as victory to shake the soul and let the glory out.${RES}";;
+    60) echo -e "${YELLOW}Rise above the storm and you will find the sunshine.${RES}";;
+    61) echo -e "${YELLOW}Begin anywhere.${RES}";;
+    62) echo -e "${YELLOW}Have faith in yourself and in the future.${RES}";;
+    63) echo -e "${YELLOW}Do it Now!${RES}";;
+    64) echo -e "${YELLOW}The best way to prepare for life is to begin to live.${RES}";;
+    65) echo -e "${YELLOW}No great thing is created suddenly.${RES}";;
+    66) echo -e "${YELLOW}It’s not the years in your life that count. It is the life in your years.${RES}";;
+    67) echo -e "${YELLOW}To know oneself, one should assert oneself.${RES}";;
+    68) echo -e "${YELLOW}There is no substitute for hard work.${RES}";;
+    69) echo -e "${YELLOW}Luck is a matter of preparation meeting opportunity.${RES}";;
+    70) echo -e "${YELLOW}Do what you can, with what you have, where you are.${RES}";;
+    71) echo -e "${YELLOW}Don’t worry about the challenges. Get excited about the rewards of crushing them.${RES}";;
+    72) echo -e "${YELLOW}Keep going. Is not as difficult as you feel it is. Don’t give up.${RES}";;
+    73) echo -e "${YELLOW}I may stumble. I may fall. I may cry. But I’ll NEVER give up! Tomorrow, I rise again.${RES}";;
+    74) echo -e "${YELLOW}Dream big, stay positive, work hard, and enjoy the journey.${RES}";;
+    75) echo -e "${YELLOW}Nothing is impossible to a willing heart.${RES}";;
+    76) echo -e "${YELLOW}Pain is inevitable. Suffering is optional.${RES}";;
+    77) echo -e "${YELLOW}Never regret anything that made you smile.${RES}";;
+    78) echo -e "${YELLOW}Aim for the moon. If you miss, you may hit a star.${RES}";;
+    79) echo -e "${YELLOW}Ninety-nine percent of the failures come from people who have the habit of making excuses.${RES}";;
+    80) echo -e "${YELLOW}In the middle of difficulty lies opportunity.${RES}";;
+    81) echo -e "${YELLOW}He that can have patience can have what he will.${RES}";;
+    82) echo -e "${YELLOW}Success is not final, failure is not fatal: it is the courage to continue that counts.${RES}";;
+    83) echo -e "${YELLOW}It is during our darkest moments that we must focus to see the light.${RES}";;
+    84) echo -e "${YELLOW}If you want to see a rainbow you have to learn to see the rain.${RES}";;
+    85) echo -e "${YELLOW}I’m a slow walker, but I never walk back.${RES}";;
+    86) echo -e "${YELLOW}Learn as if you will live forever, live like you will die tomorrow.${RES}";;
+    87) echo -e "${YELLOW}If your dreams don’t scare you, they are too small.${RES}";;
+    88) echo -e "${YELLOW}It is better to fail in originality than to succeed in imitation.${RES}";;
+    89) echo -e "${YELLOW}Either you run the time or the time runs you.${RES}";;
+    90) echo -e "${YELLOW}We will either find a way, or make one.${RES}";;
+    91) echo -e "${YELLOW}Don’t wish it were easier. Wish you were better.${RES}";;
+    92) echo -e "${YELLOW}The best way out is always through.${RES}";;
+    93) echo -e "${YELLOW}Do the hard jobs first. The easy jobs will take care of themselves.${RES}";;
+    94) echo -e "${YELLOW}It’s kind of fun to do the impossible.${RES}";;
+    95) echo -e "${YELLOW}To think too long about doing a thing often becomes its undoing.${RES}";;
+    96) echo -e "${YELLOW}Too many of us are not living our dreams because we are living our fears.${RES}";;
+    97) echo -e "${YELLOW}No one really knows why they are alive until they know what they’d die for.${RES}";;
+    98) echo -e "${YELLOW}Follow your dreams, they know the way.${RES}";;
+    99) echo -e "${YELLOW}There is only one thing that makes a dream impossible to achieve: the fear of failure.${RES}";;
+    100) echo -e "${YELLOW}There is no elevator to success. You have to take the stairs.${RES}";;
+    101) echo -e "${YELLOW}Success usually comes to those who are too busy looking for it.${RES}";;
+    102) echo -e "${YELLOW}Skill is only developed by hours and hours of work.${RES}";;
+    103) echo -e "${YELLOW}The beautiful thing about learning is that nobody can take it away from you.${RES}";;
+    104) echo -e "${YELLOW}If you have no confidence in self, you are twice defeated in the race of life.${RES}";;
+    105) echo -e "${YELLOW}Just one small positive thought in the morning can change your whole day.${RES}";;
+    106) echo -e "${YELLOW}Procrastination makes easy things hard and hard things harder.${RES}";;
+    107) echo -e "${YELLOW}Motivation is what gets you started. Habit is what keeps you going.${RES}";;
+    108) echo -e "${YELLOW}It always seems impossible until it’s done.${RES}";;
+    109) echo -e "${YELLOW}Quietly endure, silently suffer and patiently wait.${RES}";;
+    110) echo -e "${YELLOW}Life’s struggles are necessary for growth.${RES}";;
+    111) echo -e "${YELLOW}Our greatest glory is not in never falling, but in rising every time we fall.${RES}";;
+    112) echo -e "${YELLOW}Goodbye, V. And never stop fightin'${RES}";;
+    *) echo -e "${YELLOW}Happy Day!${RES}"
+esac
+
