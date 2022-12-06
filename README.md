@@ -13,7 +13,7 @@ Use `./ubuntu/setup_all.sh` (requires the stow tool) to configure the environmen
 
 ## `centos` Folder
 
-This folder stores my configuration files for *IC_EDA_ALL*
+This folder stores my configuration files for *Centos 7*
 
 You must have a **root** privilege to use these configurations, no internet connection is required.
 
@@ -29,7 +29,7 @@ Use `./redhat/setup_all.sh` to configure the environment automatically.
 
 ## `windows` Folder
 
-This folder stores some configuration files under the Windows system.
+This folder stores some configuration files for *Windows 10*.
 
 ## RandomQuotes
 
@@ -66,3 +66,7 @@ MIT instructors’ dotfiles ([Anish](https://github.com/anishathalye/dotfiles), 
 [130 Short Quotes That Will Inspire You (Fast)](https://wisdomquotes.com/short-quotes/)
 
 [Short Inspirational Quotes to Fuel Your Day](https://everydaypower.com/short-inspirational-quotes/)
+
+[搭建IC_EDA环境](https://blog.csdn.net/weixin_40377195/category_10560344.html)
+
+[读芯树 WeChat Official Account](https://mp.weixin.qq.com/s/KUh_vvtvKIwPKJmPtoa7uA)
