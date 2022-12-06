@@ -11,13 +11,21 @@ You must have a **root** privilege and a **good** internet connection to use the
 
 Use `./ubuntu/setup_all.sh` (requires the stow tool) to configure the environment automatically.
 
+## `centos` Folder
+
+This folder stores my configuration files for *IC_EDA_ALL*
+
+You must have a **root** privilege to use these configurations, no internet connection is required.
+
+Use `./centos/setup_all.sh` to configure the environment automatically.
+
 ## `redhat` Folder
 
 This folder contains configuration files for *Red Hat Linux Server 6.9*.
 
 **No root privilege or internet connection is required.**
 
- Use `./redhat/setup_all.sh` to configure the environment automatically.
+Use `./redhat/setup_all.sh` to configure the environment automatically.
 
 ## `windows` Folder
 
