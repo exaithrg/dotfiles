@@ -9,7 +9,8 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-export PS1='[\u@\h `pwd`]\$'
+# export PS1='[\u@\h `pwd`]\$'
+export PS1='\[\e[1;32m\]BASH \[\e[1;36m\]\W\[\e[m\] \$ '
 
 alias gv="gvim"
 alias g="gvim -p"
@@ -189,3 +190,11 @@ alias relmg="kill_lmg && lmg_synopsys && lmg_mentor"
 #=============================================================================================
 alias t='gnome-terminal';
 
+
+if [ -f ~/.aliases ]; then
+    # load ~/.aliases
+    source ~/.aliases
+fi
+
+set -o vi
+export EDITOR=vim

@@ -13,7 +13,7 @@ set nu
 "防止中文注释乱码
 set fileencoding=utf-8
 set fenc=utf-8
-set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936,big－5                    
+set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936,big-5                    
 set enc=utf-8
 let &termencoding=&encoding
 
