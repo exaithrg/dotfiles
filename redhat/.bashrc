@@ -55,13 +55,13 @@ load $CONF_DIR/incisive152
 load $CONF_DIR/mmsim2015
 load $CONF_DIR/cal201404.bash
 #load $CONF_DIR/cal2015
-# load $CONF_DIR/cal201903
+load $CONF_DIR/cal201903
 load $CONF_DIR/stratus152
 load $CONF_DIR/ansys181
-# load $CONF_DIR/synopsys
+load $CONF_DIR/synopsys
 load $CONF_DIR/peakview
 load $CONF_DIR/emx.bash
-# load $CONF_DIR/ext1910.bash
+load $CONF_DIR/ext1910.bash
 
 alias ic61="virtuoso&"
 alias ..="cd .."
@@ -78,6 +78,10 @@ alias qrc1="calibre -query ./RUN_DIR/LVS_DIR/svdb < ./RUN_DIR/LVS_DIR/qrc_ywh/qu
 alias qrc2="qrc -cmd ./RUN_DIR/LVS_DIR/qrc_ywh/qrc_cmd2.ccl"
 
 # User specific aliases and function
+
+if [ "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
 
 if [ -f ~/.aliases ]; then
     # load ~/.aliases

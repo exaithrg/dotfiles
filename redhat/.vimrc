@@ -19,23 +19,21 @@ syntax on
 " default leader key is /, we use space.
 let mapleader=" "
 
-set shortmess+=I " Disable the default Vim startup message.
-"set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.	
-"set hlsearch "high light search, annoying
-"set autowrite		" Automatically save before commands like :next and :make
-set hidden " Hide buffers when they are abandoned
+" set shortmess+=I " Disable the default Vim startup message.
+" set showcmd		" Show (partial) command in status line.
+" set showmatch		" Show matching brackets.	
+" set hlsearch "high light search, annoying
+" set autowrite		" Automatically save before commands like :next and :make
+" set hidden " Hide buffers when they are abandoned
 " set smartcase " Do smart case matching
-set ignorecase " Do case insensitive matching
+set ignorecase " Do case insensitive matching. same as set ic
 set incsearch " Incremental search
 set bufhidden=hide "hide buffer when it be discarded
-set background=dark
 set number " Show line numbers.
 set relativenumber
 " set nowrap " do not wrap lines
 set laststatus=2
 set backspace=indent,eol,start
-"set cursorline "show a long annoying line. 
 set ruler " show command line ruler
 set expandtab " change tab to space automatically
 set shiftwidth=4 "<< and >> width: 4
@@ -51,19 +49,15 @@ set matchtime=2 " time to jump to corresponding branket
 set updatetime=1000 "default=4000, 4 secs. 
 " set smartindent " smartindent doesn't support verilog
 set autoindent " use autoindent for verilog
-set cmdheight=1
+" set cmdheight=1
+" set cursorcolumn " same as set cuc  
+" set cursorline " same as set cul
 set laststatus=2 " show status line, defaulte is 1(hidden)
 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " what shows on status line
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-"set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+" set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
 set mouse+=a
 set scrolloff=7
-
-set background=dark
-" molokai cannot be loaded
-" colorscheme desert
-" let g:molokai_original = 1
-" colorscheme murphy
 
 " set foldclose=all "disable all fold, seems useless
 set foldmethod=syntax 
@@ -86,6 +80,22 @@ set backup
 set backupdir=~/.vim/backupdir//
 set undofile " Maintain undo history between sessions
 set undodir=~/.vim/undodir//
+
+" colorscheme config
+set background=dark
+" not supported for Vim7.4 2013 Aug10
+" set termguicolors
+
+" to support themes below, $term must be xterm-256color
+" colorscheme molokai
+" let g:molokai_original=1
+" let g:rehash256=1
+" molokai can't highlight lines on redhat???
+
+colorscheme vim-monokai-tasty
+" colorscheme desert
+" colorscheme neodark
+" colorscheme murphy
 
 highlight clear LineNr
 highlight clear SignColumn
@@ -155,9 +165,10 @@ nnoremap L zl
 
 " carefully use ZZ, ZZ may cause unanticipated exits.
 nnoremap ZZ :echoe "Use :wq"<CR>
-nnoremap QQ :qa!<CR>
+nnoremap QQ :q<CR>
+nnoremap QA :qa!<CR>
 
-nnoremap q: :echoe "q: not found"<CR>
+nnoremap q: :echoe "q: not found, use ESC and :q to quit"<CR>
 
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -187,6 +198,8 @@ func SetTitle()
 endfunc
 autocmd BufNewfile * normal G
 
+" NerdTree config
+
 " let g:NERDTreeDirArrows      = 1
 " let g:NERDTreeDirExpandable  = 1
 " let g:NERDTreeDirCollapsible = 1
@@ -201,7 +214,7 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " autocmd VimEnter * NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " :NERDTree to open
 " ? to turn on the quick help
@@ -211,3 +224,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " nnoremap <leader>m :NERDTree<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 " nnoremap <leader>f :NERDTreeFind<CR>
+
+
+

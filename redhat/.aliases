@@ -23,6 +23,12 @@ cdpluslscf() {
     ls -CF
 }
 
+# TODO: add findsuffix, like
+# fine . -regex "^.*\.{$1}$" -type f"
+findregex() {
+    find . -regex $1 -type f
+}
+
 gadplusgcm() {
     git add .
     git commit -m $1
@@ -37,15 +43,29 @@ alias la='ls -A'
 alias sl='sl -e'
 alias c='cd'
 alias cl='cdpluslscf'
-alias cb='cd ..'
-alias cbb='cd ../..'
-alias cbbb='cd ../../..'
-alias cbbbb='cd ../../../..'
-alias cbbbbb='cd ../../../../..'
+alias cb='cd -'
+# TODO: add f,ff,fff,ffff function
+# use pwd to store current path when use b,bb,bbb
+# use cd - and cd ../../.. to achieve f,ff,fff
+# OR: add a CLI version of reahat browser GUI
+# you can use bash parameter ${OLDPWD}
+alias b='cd ..'
+alias bb='cd ../..'
+alias bbb='cd ../../..'
+alias bbbb='cd ../../../..'
+alias bbbbb='cd ../../../../..'
+alias ttt='exit'
 # alias dc='cd'
 
 alias mv='mv -i'
 alias cp='cp -i'
+alias grep='grep -i'
+alias fr='findregex'
+alias sed='sed -r'
+# 744: rwxr--r--
+# don't use chmod +x as it add x permission to every user
+# chmod +100 is not supported on this server
+alias addx='chmod 744'
 # Do not alias rm -vI. Cuz if you used to it, 
 # you will expect rm prompt you by default
 # So do not change the original behavior of rm
@@ -64,17 +84,30 @@ alias so='source'
 # alias sed='sed -E'
 
 alias v='vim'
+alias vi='vim'
 alias ge='geditruninbg'
 
+# git commands
 alias gs='git status'
 alias gad='git add .'
 alias gcm='git commit -m'
+alias gcam='git commit -am'
 alias gac='gadplusgcm'
 alias glog='git log'
 alias gref='git reflog'
 alias gldag='git log --all --graph --decorate'
+alias grrc='git rm -r --cached .'
 
-alias tsmc28nm='cd /pdk/mooreelite/TSMC28HPC+/TSMC_iPDK_20170531/STD_CELL/tcbn28hpcplusbwp12t30p140_190a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp12t30p140_180a'
-alias hlmc55nm='cd /home/share/file_pdk/HLMC55LP/hp_lvt'
-alias csmc018um='cd /home/share/file_pdk/CSMC_0.18um_1.8V_5V/CSMC_0.18um_1.8V_5V/CSMC0181P6M9TlibG2_BE_V20C02/synopsys'
+# vnc commands
+# vncserver
+# vncpasswd
+# vncserver -kill :18
+# vncserver -geometry 3840x2160
+# ps -ef | grep vnc | grep username
+
+# cd aliases
+alias tsmc28='cd /pdk/mooreelite/TSMC28HPC+/TSMC_iPDK_20170531/STD_CELL/tcbn28hpcplusbwp12t30p140_190a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp12t30p140_180a'
+alias hlmc55='cd /home/share/file_pdk/HLMC55LP/hp_lvt'
+alias csmc018='cd /home/share/file_pdk/CSMC_0.18um_1.8V_5V/CSMC_0.18um_1.8V_5V/CSMC0181P6M9TlibG2_BE_V20C02/synopsys'
+alias trash='cd /home/genghaoran/.local/share/Trash/file/'
 
