@@ -28,16 +28,26 @@ alias lll='ll -l'
 alias la='ls -A'
 alias sl='sl -e'
 alias c='cd'
-# alias dc='cd'
 alias cl='cdpluslscf'
-alias cb='cd ..'
-alias cbb='cd ../..'
-alias cbbb='cd ../../..'
-alias cbbbb='cd ../../../..'
-alias cbbbbb='cd ../../../../..'
+alias cb='cd -'
+# TODO: add f,ff,fff,ffff function
+# use pwd to store current path when use b,bb,bbb
+# use cd - and cd ../../.. to achieve f,ff,fff
+# OR: add a CLI version of reahat browser GUI
+# you can use bash parameter ${OLDPWD}
+alias b='cd ..'
+alias bb='cd ../..'
+alias bbb='cd ../../..'
+alias bbbb='cd ../../../..'
+alias bbbbb='cd ../../../../..'
+alias ttt='exit'
+# alias dc='cd'
 
 alias mv='mv -i'
 alias cp='cp -i'
+alias grep='grep -i'
+alias fr='findregex'
+alias sed='sed -r'
 # Do not alias rm -vI. Cuz if you used to it, 
 # you will expect rm prompt you by default
 # So do not change the original behavior of rm
@@ -50,6 +60,7 @@ alias removegit='remove -rf .git'
 
 alias mkdir='mkdir -p'
 alias df='df -h'
+alias dush='du -sh *'
 alias xo='xdg-open'
 alias so='source'
 # alias sed='sed -E'
@@ -120,6 +131,7 @@ alias gacp='gadplusgcmplusgp'
 alias glog='git log'
 alias gref='git reflog'
 alias gldag='git log --all --graph --decorate'
+alias grrc='git rm -r --cached .'
 alias ypull='ysyxpull'
 alias ypush='ysyxpush'
 
