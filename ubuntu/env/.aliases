@@ -169,3 +169,7 @@ alias mc='prime-run minecraft-launcher'
 # alias matr='cmatrix -r'
 # alias matg='cmatrix'
 
+alias condaenv='conda env list'
+alias condaact='conda activate'
+alias condadeact='conda deactivate'
+
