@@ -480,6 +480,174 @@ r "reload .tmux.conf"
 # Shell Commands
 
 ```bash
+echo $PATH
+echo $TERM
+echo $SHELL
+neofetch
+btop
+df -h
+free -m
+du -sh *
+lscpu
+cat /proc/cpuinfo
+nvidia-smi
+top
+fdisk -l
+cat /etc/redhat-release
+uname -a
+cat /etc/*-release
+
+
+^z
+^r
+bg
+fg
+jobs
+bg %1
+kill %1
+nohup sleep 2000 & [cannot be stopped by kill -HUP]
+kill -STOP %1
+kill -HUP %1
+
+
+# last command
+ffmpeg -loglevel panic -i /home/geng/D/movies/Pearl_Harbor.rmvb -frames 1 -f image2 - | convert - -colorspace gray - > hello.png
+# or
+ffmpeg -loglevel panic -i /home/geng/D/movies/Miyamoto/Musashi01.rmvb -frames 10000 -f image2 - | convert - -colorspace gray - > xmwz.png
+
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | sort -nk1,1 | tail -n5 | gnuplot -p -e 'set boxwidth 0.5; plot "-" using 1:xtic(2) with boxes'
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | sort -nk1,1 | tail -n5 | grep -v 'zh'
+      4 linye
+      5 xiechenjia
+grep -v means dont match
+find . -name "*.txt" | xargs grep "genghaoran"
+find . -name "*.txt" | xargs echo grep "genghaoran"
+echo command, not really execute it. can used to debug xargs.
+
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/.*dell03://' | sed -E 's/ .auth.*$//'
+echo 'aba' | sed 's/[ab]//' [ba]
+echo 'aba' | sed 's/[ab]*//' [NULL]
+echo 'bba' | sed 's/[ab]//g' [NULL]
+echo 'asldgjakfjsbbba' | sed 's/[ab]//g' [sldgjkfjs]
+echo 'abcaba' | sed -E 's/(ab)*//g' [ca]
+echo 'abcaba' | sed 's/\(ab\)*//g' [ca]
+echo 'abcaba' | sed 's/(ab)*//g' [abcaba]
+echo 'abcababc' | sed -E 's/(ab|bc)*//g' [cc]
+echo 'abcabbc' | sed -E 's/(ab|bc)*//g' [c]
+echo 'Disconnected from invalid user Disconnected from 84.211' | sed -E 's/.*Disconnected from //' [84.211, cause greedy]
+echo 'Disconnected from invalid user Disconnected from 84.211' | sed -E 's/.*?Disconnected from //'84.211 [should not greedy, but sadly sed does not support ?]
+echo 'Disconnected from invalid user Disconnected from 84.211' | sed -E 's/^.*Disconnected from (invalid )?user .* [0-9.]*$//' [NULL]
+echo 'Disconnected from invalid user Disconnected from 84.211' | sed -E 's/^.*Disconnected from (invalid )?user (.*) [0-9.]*$//' [ADD Capture Group for username]
+echo 'Disconnected from invalid user Disconnected from 84.211' | sed -E 's/^.*Disconnected from (invalid )?user (.*) [0-9.]*$/\2/' [Disconnected from]
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/.*dell03://' | sed -E 's/ .auth.*$//' | sed -E 's/^([0-9]+) \((.*)\)/\1 \2/' | head -n5 [can remove all ()]
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/.*dell03://' | sed -E 's/ .auth.*$//' | sed -E 's/^([0-9]+) \((.*)\)/\1 \2/' | sort -n
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/.*dell03://' | sed -E 's/ .auth.*$//' | sed -E 's/^([0-9]+) \((.*)\)/\1 \2/' | sort -n | sed -E 's/^[0-9]+ ([a-z]+).*$/\1/' | uniq -c [ERROR! 5 xiechenjia, but only 2]
+cat vncpsef_point9.txt | grep desktop | sed -E 's/.*server://' | sed -E 's/ .auth.*$//' | sed -E 's/^([0-9]+) \((.*)\)/\1 \2/' | sort -n | sed -E 's/^[0-9]+ ([a-z]+).*$/\1/' | grep xiechenjia
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | uniq -c [still have uniq bugs]
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c [OK. MUST SORT FIRST]
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | sort -n | tail -n5 [OK!!!]
+wc -l :33 [33 users are using dell03]
+cat vncpsef_point9.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | sort -n | tail -n5
+wc -l :15 [15 users are using point9]
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | sort -rnk1,1 | head -n5
+1,1 means start at the first column and end at the first column
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | sort -n | tail -n20 | awk '{print $2}' | paste -sd,
+xionghuawei,xuyongfeng,xuyongye,yanweijia,yexinyu,hesunan,lilikai,liuchengjie,liyalin,lvjingjing,mahe,ningzihan,shaozhuang,xuliangyue,yinwenhe,zhangheng,zhangzhenshi,zhengyu,linye,xiechenjia
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | awk '$1 == 1 && $2 ~ /^l.*$/ {print $0}'
+[awk is great for operating over columns]
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | awk 'BEGIN { rows = 0 } $1 == 1 && $2 ~ /^l.*$/ {rows += 1} END { print rows }'
+[begin: match the 0th line. end: match the last+1 line.]
+echo "1+2" | bc -l
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | awk '$1 != 1 { print $1 }' | paste -sd+
+2+2+4+2+2+2+2+2+2+5+2+2+2+2+2
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | awk '$1 != 1 { print $1 }' | paste -sd+ | bc -l
+35
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | awk '{ print $1 }' | paste -sd+ | bc -l
+53
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*$/\1/' | sort | uniq -c | awk '{ print $1 }'
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*rfbport ([0-9]+) .*$/\1 \2/' | sort
+##############################################################
+cat psefvnc_dell03.txt | grep desktop | sed -E 's/^.*\(([a-z]+)\).*rfbport ([0-9]+) .*$/\1: \2/' | sort | awk 'BEGIN{FS=":";OFS=":"}{a[$1]=a[$1] $2}END{for(v in a)print v,a[v]}' | sort
+##############################################################
+
+
+find . -name "*.[ch]" | xargs grep "#include" | sort | uniq
+find . -name "*.[ch]" | xargs -t grep "#include" | sort | uniq
+find ./ -name "*.c" | awk -F "." '{print $2}' | xargs -i -t mv ./{}.c  ./{}.html
+find ./ -name "*.h" | awk -F "." '{print $2}' | xargs -i -t mv ./{}.h  ./{}.html
+find . -name "*.html" -type f | xargs
+find . -name "*.html" -type f | xargs -d\ # a space here, use space to split
+grep -l '2' *.json -Z | xargs -0 cat
+rg -l -e '2' -tjson -0 | xargs -0 cat
+find -name '*json' -print0 | xargs -0 cat
+# 替换\n为\0
+rg -l -e '2' -tjson | tr '\n' '\0' | xargs -0 cat
+find -name '*json' | tr '\n' '\0' | xargs -0 cat
+find . -name "*.html" -type f -print0 | xargs -0 zip -r htmls.zip
+
+
+tldr rg
+ls -ahlrt --color
+
+sudo dpkg -i *.deb
+sudo apt install imagemagick
+sudo apt install plocate
+grep -R python .
+rg 'python'
+find . -name '*.sh' -type f
+fd '.sh'
+sudo apt install fortune-mod
+sudo apt install cowsay
+fortune | cowsay
+apt info xxxname
+figlet hello
+toilet hi
+toilet -f mono12 -F gay a girl
+oneko
+xeyes
+sudo apt install ncal
+cal 9 1752
+echo $((2022-1752))
+apt-get moo
+fortune | rev
+sudo apt install boxes
+sudo apt install lolcat
+sudo apt install libaa-bin
+aafire
+fortune | boxes -d cat | lolcat
+toilet -f mono12 -F gay Happy    
+sudo apt-get install aview imagemagick
+wget http://labfile.oss.aliyuncs.com/courses/1/Linus.png
+asciiview Linus.png
+shellcheck mcd.sh
+ripgrep
+
+acpi -V
+cat /sys/class/power_supply/BAT0/capacity
+cat /sys/class/thermal/thermal_zone0/temp
+man test
+
+# Find all directories named src
+find . -iname src -type d # -name, case sensitive; -iname, case insensitive
+# Find all python files that have a folder named test in their path
+find . -path '*/test/*.py' -type f
+# Find all files modified in the last day
+find . -mtime -1
+# Find all zip files with size in range 500k to 10M
+find . -size +500k -size -10M -name '*.tar.gz'
+# Delete all files with .tmp extension
+find . -name '*.tmp' -exec rm {} \;
+# Find all PNG files and convert them to JPG
+find . -name '*.png' -exec convert {} {}.jpg \;
+
+uname -r
+uname -a
+py -m memory_profiler mem.py 
+kernprof -l -v urls.py
+fortune | lolcat
+python -m cProfile -s tottime urls.py| tac
+python -m cProfile -s tottime grep.py 1000 '^(import|\s*def)[^,]*$' *.py
+time curl https://missing.csail.mit.edu &> /dev/null
 grep -rni "hello,world!" *
 sed -i 's/2020/8080/g' ./conf/server.xml
 find . -regex "^.*\.pdf$" -type f
@@ -566,3 +734,10 @@ cat /proc/version
 
 ```
 
+## PDB Commands
+
+## GDB Commands
+
+
+
+# THE END
