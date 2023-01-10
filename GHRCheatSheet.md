@@ -477,3 +477,13 @@ w "list window"
 r "reload .tmux.conf"
 ```
 
+# Shell Commands
+
+```bash
+grep -rni "hello,world!" *
+sed -i 's/2020/8080/g' ./conf/server.xml
+find . -regex "^.*\.pdf$" -type f
+sudo strace ls -l > /dev/null
+gdb --args sleep 10
+```
+
