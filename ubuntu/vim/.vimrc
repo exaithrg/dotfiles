@@ -25,7 +25,9 @@ let mapleader=" "
 
 set shortmess+=I " Disable the default Vim startup message.
 "set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.	
+set noshowmatch		" Show matching brackets
+""set matchtime=2 " time to jump to corresponding branket
+let g:loaded_matchparen=1 " disable annoying brackets match
 "set hlsearch "high light search, annoying
 "set autowrite		" Automatically save before commands like :next and :make
 set hidden " Hide buffers when they are abandoned
@@ -50,7 +52,6 @@ set autochdir " auto switch work dir as current dir
 set backupcopy=yes " overwrite as backup??
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb= 
-set matchtime=2 " time to jump to corresponding branket
 "set magic
 set updatetime=1000 "default=4000, 4 secs. 
 " set smartindent " smartindent doesn't support verilog
@@ -168,7 +169,7 @@ iabbrev always_comb always_comb begin
 
 " autocmd BufWritePost $MYVIMRC source $MYVIMRC"
 
-func SetTitle()
+func SetCVTitle()
     call setline(1, "//***************************************************************")
     call setline(2, "// Description: ")
     call setline(3, "// File Name: ".expand("%"))
@@ -192,7 +193,7 @@ func SetPyTitle()
     call setline(9, "")
 endfunc
 
-autocmd BufNewFile *.c,*.cpp,*.sv,*.v exec ":call SetTitle()"
+autocmd BufNewFile *.c,*.cpp,*.sv,*.v exec ":call SetCVTitle()"
 autocmd BufNewFile *.py exec ":call SetPyTitle()"
 autocmd BufNewfile * normal G
 
@@ -334,10 +335,10 @@ Plug 'valloric/youcompleteme'
 Plug 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = 'context'
 
-Plug 'ctrlpvim/ctrlp.vim'
-" do not use <c-p> as ^p for paste
-let g:ctrlp_map = '<c-n>' 
-let g:ctrlp_cmd = 'CtrlP'
+" Plug 'ctrlpvim/ctrlp.vim'
+" " do not use <c-p> as ^p for paste
+" let g:ctrlp_map = '<c-n>' 
+" let g:ctrlp_cmd = 'CtrlP'
 
 Plug 'godlygeek/tabular'
 
