@@ -485,5 +485,84 @@ sed -i 's/2020/8080/g' ./conf/server.xml
 find . -regex "^.*\.pdf$" -type f
 sudo strace ls -l > /dev/null
 gdb --args sleep 10
+pyflakes lint.py
+mypy lint.py
+apt info shellcheck
+btop
+htop
+ls -CF
+ls -AhF
+ls -A
+sl -e
+df -h
+du -sh *
+watch -n 1 -d nvidia-smi
+tmux new -s
+tmux attach -t
+tmux kill-server
+tmux kill-session -t
+git log --all --graph --decorate
+git rm -r --cached .
+prime-run minecraft-launcher
+conda env list
+conda activate work
+conda deactivate
+python -m ipdb hello.py
+pip install ipdb
+pip show requests
+pip show -f requests
+diff ~/.gitconfig dotfiles/.gitconfig
+md5sum ~/.aliases dotfiles/.aliases
+vimdiff ~/.vimrc dotfiles/.vimrc
+man watch
+watch -t
+
+# findvnc
+ps -ef | grep vnc | grep desktop | sed -E 's/^.*\(([a-z]+)\).*rfbport ([0-9]+) .*$/\1: \2/' | sort | awk 'BEGIN{FS=":";OFS=":"}{a[$1]=a[$1] $2}END{for(v in a)print v,a[v]}' | sort
+
+# cpu monitor
+watch -n 1 "cat /proc/cpuinfo | grep MHz | awk '{print \$1 NR \$3 \$4 \$2}'"
+
+# Count how many lines are in my dotfiles
+find . -type f | sed -E 's/^\.\/refs.*$//' | sed -E '/^$/d' | xargs cat | wc -l
+find . -type f | sed -E '/^\.\/refs.*$/d' | xargs cat | sed -E '/^[#"].*$/d' | sed -E '/^[ \t]*$/d' | wc -l
+
+# Find and concisely list the port numbers of all vnc users
+ps -ef | grep vnc | grep desktop | sed -E 's/^.*\(([a-z]+)\).*rfbport ([0-9]+) .*$/\1: \2/' | sort | awk 'BEGIN{FS=":";OFS=":"}{a[$1]=a[$1] $2}END{for(v in a)print v,a[v]}' | sort
+
+# use shuf to get random number
+while [[ `seq 1 10 | shuf | head -n 1` != "1" ]]; do echo "retry"; done
+
+# pack files and upload by ssh
+find . -name "*.pdf" | xargs tar cj | ssh yzh@192.168.1.1 'cd ysyx; > pdf.tar.bz2'
+
+# search tools type
+echo $PATH | tr -t : '\n' | xargs -I{} find {} -maxdepth 1 -type f -executable | \
+  xargs file -b -e elf | sort | uniq -c | sort -nr
+
+# vim which elf
+vim `which -a which | grep -v shell | head -n 1`
+
+# get your top 10 most used commands, for bash
+history | awk '{$1="";print substr($0,2)}' | sort | uniq -c | sort -n | tail -n 10
+# for zsh
+history 1 | awk '{$1="";print substr($0,2)}' | sort | uniq -c | sort -n | tail -n 20
+
+# search pattern within all files in current dir
+grep "regexp" . -nr
+
+# count how many files in current dir
+ls -lR | grep "^-" | wc -l
+
+# gpu use
+watch -n 1 -d nvidia-smi
+
+# ls gpus in your pc
+lspci -k | grep -A 2 -E "(VGA|3D)"
+
+# ls linux version and system name
+cat /proc/version
+ -n 1 "echo -n 'Hello | Time: '; date; echo 'GHR CLOCK'"
+
 ```
 
