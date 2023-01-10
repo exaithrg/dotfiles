@@ -167,7 +167,7 @@ iabbrev always_ff always_ff @ (posedge clk) begin
 iabbrev always_comb always_comb begin
 
 " autocmd BufWritePost $MYVIMRC source $MYVIMRC"
-autocmd BufNewFile *.c,*.cpp,*.py,*.sv,*.v exec ":call SetTitle()"
+
 func SetTitle()
     call setline(1, "//***************************************************************")
     call setline(2, "// Description: ")
@@ -179,6 +179,21 @@ func SetTitle()
     call setline(8, "//***************************************************************")
     call setline(9, "")
 endfunc
+
+func SetPyTitle()
+    call setline(1, "#***************************************************************")
+    call setline(2, "# Description: ")
+    call setline(3, "# File Name: ".expand("%"))
+    call setline(4, "# Author: Haoran Geng")
+    call setline(5, "# Email: ")
+    call setline(6, "# Created Time: ".strftime("%c"))
+    call setline(7, "# Revision history:")
+    call setline(8, "#***************************************************************")
+    call setline(9, "")
+endfunc
+
+autocmd BufNewFile *.c,*.cpp,*.sv,*.v exec ":call SetTitle()"
+autocmd BufNewFile *.py exec ":call SetPyTitle()"
 autocmd BufNewfile * normal G
 
 " vim-plug
