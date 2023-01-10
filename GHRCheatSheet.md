@@ -75,6 +75,7 @@ alias remove='/usr/bin/rm -vI'
 # alias remove='/usr/bin/rm -vi'
 # use sudo removegit
 alias removegit='remove -r .git'
+alias ttt='exit'
 
 alias mkdir='mkdir -p'
 alias df='df -h'
@@ -480,6 +481,56 @@ r "reload .tmux.conf"
 # Shell Commands
 
 ```bash
+sudo apt install ncdu
+sudo apt install kolourpaint
+sudo apt install okular
+sudo apt install rar
+sudo apt install unrar
+sudo apt install p7zip-full
+sudo apt install okteta
+sudo apt install ghostwriter
+sudo apt install doxygen
+sudo apt install doxygen-gui
+sudo apt install doxygen-doc
+doxywizard
+sudo apt install simplescreenrecorder
+sudo apt install obs-studio
+sudo apt install geogebra
+sudo apt install luckybackup
+sudo apt install hardinfo
+sudo apt install texlive-full
+
+pip install bs4
+pip install line_profiler
+pip install memory_profiler
+pip install ipdb
+pip install matplotlib
+
+ncdu .
+py -m http.server 4444
+sudo lsof | grep ":4444 .LISTEN"
+hyperfine --warmup 3 'fd -e jpg' 'find . -iname "*.jpg"' 
+
+du -sh *
+du -sh .
+df -h
+neofetch
+man exa
+
+perf --version
+apt info stress
+sudo apt install stress
+sudo perf stat stress -c 1
+sudo perf record stress -c 1
+sudo perf report
+
+# for perf tool
+sudo apt-get install linux-tools-common
+sudo apt-get install linux-tools-"$(uname -r)"
+sudo apt-get install linux-cloud-tools-"$(uname -r)"
+sudo apt-get install linux-tools-generic
+sudo apt-get install linux-cloud-tools-generic
+
 echo $PATH
 echo $TERM
 echo $SHELL
@@ -732,11 +783,70 @@ lspci -k | grep -A 2 -E "(VGA|3D)"
 cat /proc/version
  -n 1 "echo -n 'Hello | Time: '; date; echo 'GHR CLOCK'"
 
+pdflatex paper.tex
 ```
 
 ## PDB Commands
 
+```
+l
+s
+Enter
+restart
+c
+p arr
+p arr[j]
+p j
+q
+q
+exit
+n
+s
+l
+p locals()
+```
+
+
+
 ## GDB Commands
+
+```
+NONE YET
+```
+
+
+
+## Makefile
+
+```makefile
+paper.pdf: paper.tex plot-data.png
+	pdflatex paper.tex
+
+plot-%.png: %.dat plot.py
+	./plot.py -i $*.dat -o $@
+	
+hello:hello.c
+	gcc hello.c -o hello
+
+.PHONY: clean
+
+clean:
+	rm hello
+
+test:test.cpp
+	g++ test.cpp -g -Wall -Werror -o main
+
+.PHONY: clean
+
+clean:
+	rm main
+
+main:test.cpp
+	g++ test.cpp -o main
+
+```
+
+
 
 
 
