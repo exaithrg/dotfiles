@@ -483,8 +483,6 @@ r "reload .tmux.conf"
 ```bash
 echo $OLDPWD
 
-
-
 sudo apt install ncdu
 sudo apt install kolourpaint
 sudo apt install okular
